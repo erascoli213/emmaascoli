@@ -5,3 +5,5 @@
 - [x] Use Emma's uploaded pink logo in place of the typed "emmaascoli" wordmark (header, footer, browser tab icon)
 - [ ] Swap in Emma's real projects and contact details
 - [x] Recolor "Some cool work" section to Emma's dark pink (screenshot #704860) with readable text
+- [x] Make the hero a full screen tall so the work needs a scroll to reach
+- [x] Pull the hero content up closer to the top navigation
