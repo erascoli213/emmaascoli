@@ -3,9 +3,12 @@
 - [x] Move doodles to the right edge of the hero (no image block)
 - [x] Delete hero star doodle; center the loop vertically on the right
 - [x] Use Emma's uploaded pink logo in place of the typed "emmaascoli" wordmark (header, footer, browser tab icon)
-- [ ] Swap in Emma's real projects and contact details
 - [x] Recolor "Some cool work" section to Emma's dark pink (screenshot #704860) with readable text
 - [x] Make the hero a full screen tall so the work needs a scroll to reach
 - [x] Pull the hero content up closer to the top navigation
 - [x] Bring the work section closer to the hero: pink edge peeks at the bottom, work text still needs a scroll
 - [x] Remove the thin line at the top of the work section
+- [x] Build case study 01 "Designing access management at scale" from Emma's SCIM deck; artwork fits its card and the phone case-study view (both cards)
+- [ ] Confirm real details for case study 01: year, product/client context (her deck had placeholder tables, so no results are shown)
+- [ ] Decide what happens to Common Ground (placeholder concept) next to her real work — keep, replace with a second real study, or remove
+- [ ] Swap in Emma's real projects and contact details when she sends them
