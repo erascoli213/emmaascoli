@@ -31,7 +31,7 @@ function Index() {
   ];
   return (
     <div className="portfolio">
-      <header className="site-header"><a href="#home" className="site-logo" aria-label="Emma Ascoli home"><img src={logoAsset.url} alt="Emma Ascoli" width="1029" height="279"/></a><nav aria-label="Main navigation"><a href="#work">My work</a><a href="#about">A little about me</a><Button asChild variant="outline" className="nav-contact"><a href="#contact">Let’s connect <ArrowUpRight/></a></Button></nav></header>
+      <header className="site-header"><a href="#home" className="site-logo" aria-label="Emma Ascoli home"><img src={logoAsset.url} alt="Emma Ascoli" width="1029" height="279"/></a><nav aria-label="Main navigation"><a href="#work">Some of my work</a><a href="#about">More about me</a><Button asChild variant="outline" className="nav-contact"><a href="#contact">Let’s connect <ArrowUpRight/></a></Button></nav></header>
       <main>
         <section id="home" className="hero">
           <div className="hero-main"><span className="hero-eyebrow"><span className="tiny-spark">✳</span> CURIOUS MIND. THOUGHTFUL DESIGN.</span><div className="hero-title"><h1>EMMA ASCOLI<span className="title-dot">.</span></h1></div><p>A product designer with a process rooted<br className="desktop-break"/> in <span>curiosity</span> and <span>collaboration.</span></p><Button asChild className="pill-button"><a href="#work">Take a look at my work <ArrowDown size={17}/></a></Button></div>
