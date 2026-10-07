@@ -10,7 +10,7 @@ export function LoopDoodle({ className = '' }: { className?: string }) {
 
 export function ProjectArt({ theme }: { theme: string }) {
   if (theme === 'access') return <div className="project-art access-art" aria-label="Enterprise identity provisioning console mockup">
-    <span className="art-brand"><ShieldCheck size={22}/> provisioning</span>
+    <span className="art-brand"><ShieldCheck size={22}/> SCIM provisioning</span>
     <div className="browser-mock">
       <div className="browser-bar"><span>● ● ●</span><small>console / identity provisioning</small><ArrowUpRight size={12}/></div>
       <div className="mock-nav"><strong>identity ✳</strong><span>Directory &nbsp; Members</span><span className="mock-nav-button">Finish setup</span></div>
