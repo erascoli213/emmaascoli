@@ -219,7 +219,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .work-section .project-meta { color: var(--work-muted); }
 .work-section .project-heading h3 { color: var(--work-ink); }
 .work-section .project-card > p { color: var(--work-muted); }
-.work-section .concept-note { color: var(--work-muted); }
+.work-section .concept-note { color: var(--work-ink); opacity: .82; }
 .work-section .project-link { border-color: var(--work-line); color: var(--work-ink); }
 .work-section ::selection { background: var(--work-ink); color: var(--work-bg); }
 .section-top { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 36px; gap: 30px; }
