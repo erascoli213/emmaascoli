@@ -14,14 +14,12 @@ export function ProjectArt({ theme }: { theme: string }) {
     <div className="browser-mock">
       <div className="browser-bar"><span>● ● ●</span><small>console / identity provisioning</small><ArrowUpRight size={12}/></div>
       <div className="mock-nav"><strong>identity ✳</strong><span>Directory &nbsp; Members</span><span className="mock-nav-button">Finish setup</span></div>
-      <div className="mock-heading"><span>SETUP WIZARD · STEP 2 OF 3</span><h4>Who gets in,<br/>and how.</h4><p>Connect your directory. See exactly what moves across.</p></div>
+      <div className="mock-heading"><span>SETUP WIZARD · STEP 2 OF 3</span><h4>Who gets in, and how.</h4><p>Connect your directory. See exactly what moves across.</p></div>
       <div className="scim-steps"><span className="done">Provider settings ✓</span><span className="now">User attributes</span><span>Test &amp; finish</span></div>
       <div className="scim-map"><span>email</span><ArrowRight/><span>email</span><em>✓</em></div>
       <div className="scim-map"><span>firstName</span><ArrowRight/><span>name</span><em>✓</em></div>
       <div className="scim-map"><span>groups</span><ArrowRight/><span>roles</span><em>✓</em></div>
-      <div className="scim-status"><span>Authentication</span><b>Verified</b></div>
-      <div className="scim-status"><span>Authorization</span><b>Active</b></div>
-      <div className="scim-status"><span>Logging</span><b>Configured</b></div>
+      <div className="scim-status"><span>Authentication <b>Verified</b></span><span>Authorization <b>Active</b></span><span>Logging <b>Configured</b></span></div>
     </div>
     <span className="art-caption">access that sets itself up</span>
   </div>;

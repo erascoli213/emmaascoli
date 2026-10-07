@@ -245,7 +245,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .project-image-button:hover .access-art .browser-mock { transform: translateY(-5px); }
 .access-art .mock-nav { padding: 9px 17px; }
 .access-art .mock-heading { padding: 3px 17px 8px; }
-.access-art .mock-heading h4 { font-size: 18px; margin: 4px 0; }
+.access-art .mock-heading h4 { font-size: 17px; margin: 4px 0; }
 .access-art .scim-map { margin-top: 4px; padding: 4px 8px; }
 .access-art .scim-status { margin-top: 2px; }
 @media(max-width:760px) { .access-art .browser-mock { top: 60px; height: 212px; } }
