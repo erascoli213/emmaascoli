@@ -372,3 +372,11 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
   .case-dialog .access-art .browser-mock { top: 46px; height: 222px; }
   .case-dialog .common-art .browser-mock { top: 44px; height: 232px; transform: rotate(-2deg); }
 }
+
+@media(max-width:760px) {
+  .case-dialog .common-art .mock-nav { padding: 8px 17px; }
+  .case-dialog .common-art .mock-heading { padding: 3px 17px 7px; }
+  .case-dialog .common-art .mock-heading h4 { font-size: 17px; margin: 4px 0; }
+  .case-dialog .common-art .event-grid { padding: 7px 17px; }
+  .case-dialog .common-art .event-image { height: 30px; }
+}
