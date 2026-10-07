@@ -291,7 +291,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .process-footer > svg { color: var(--rose); }
 .process-footer > svg:last-child { width: 90px; height: 23px; margin-left: 12px; }
 .about-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; padding-top: 90px; padding-bottom: 90px; align-items: center; }
-.about-mark { position: relative; }
+.about-mark { position: relative; width: fit-content; }
 .about-photo { width: 100%; max-width: 430px; display: block; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 26px; transform: rotate(-1.2deg); }
 .about-star { position: absolute; top: -26px; right: -14px; width: 62px; color: var(--rose); animation: doodle-sway 5s ease-in-out infinite; }
 .about-copy h2 { font-size: 43px; margin: 15px 0 20px; }
