@@ -400,7 +400,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .case-story { display: grid; gap: 44px; margin-top: 40px; }
 .story-section p { margin: 10px 0 0; line-height: 1.65; max-width: 68ch; }
 .story-section .case-subheading { margin: 6px 0 10px; }
-.story-bullets { margin: 12px 0 0; padding-left: 20px; display: grid; gap: 7px; line-height: 1.55; }
+.story-bullets { list-style: disc; margin: 12px 0 0; padding-left: 20px; display: grid; gap: 7px; line-height: 1.55; }
 .story-bullets li::marker { color: var(--rose); }
 .story-highlight { margin: 22px 0 0; padding: 20px 24px; border-left: 3px solid var(--color-primary); border-radius: 0 18px 18px 0; background: color-mix(in oklab, var(--color-primary) 8%, transparent); font-family: "DM Serif Display", serif; font-size: 21px; line-height: 1.35; }
 .story-images { display: grid; gap: 18px; margin-top: 22px; }
