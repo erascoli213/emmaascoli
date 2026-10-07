@@ -1,2 +1,2 @@
 - [x] Remove hero side panel + bottom line, move doodles below name
-- [ ] Remove navy border around hero
+- [x] Remove navy border around hero
