@@ -12,3 +12,4 @@
 - [ ] Confirm real details for case study 01: year, product/client context (her deck had placeholder tables, so no results are shown)
 - [ ] Decide what happens to Common Ground (placeholder concept) next to her real work — keep, replace with a second real study, or remove
 - [ ] Swap in Emma's real projects and contact details when she sends them
+- [x] Keep the case-study card title on one line; move the handwritten note and floating arrow clear of the artwork (both cards, all widths)
