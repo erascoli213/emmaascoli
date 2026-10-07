@@ -7,3 +7,4 @@
 - [x] Recolor "Some cool work" section to Emma's dark pink (screenshot #704860) with readable text
 - [x] Make the hero a full screen tall so the work needs a scroll to reach
 - [x] Pull the hero content up closer to the top navigation
+- [x] Bring the work section closer to the hero: pink edge peeks at the bottom, work text still needs a scroll
