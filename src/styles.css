@@ -290,11 +290,10 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .process-footer { display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 10px; padding-top: 36px; }
 .process-footer > svg { color: var(--rose); }
 .process-footer > svg:last-child { width: 90px; height: 23px; margin-left: 12px; }
-.about-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; padding-top: 90px; padding-bottom: 90px; }
-.about-mark { display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.about-mark .star-doodle { width: 88px; color: var(--rose); }
-.about-mark > span { font-family: var(--font-display); font-size: 30px; text-align: center; line-height: 1.25; margin-top: 15px; }
-.about-mark em { color: var(--plum); }
+.about-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; padding-top: 90px; padding-bottom: 90px; align-items: center; }
+.about-mark { position: relative; }
+.about-photo { width: 100%; max-width: 430px; display: block; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 26px; transform: rotate(-1.2deg); }
+.about-star { position: absolute; top: -26px; right: -14px; width: 62px; color: var(--rose); animation: doodle-sway 5s ease-in-out infinite; }
 .about-copy h2 { font-size: 43px; margin: 15px 0 20px; }
 .about-copy p { font-size: 13px; line-height: 1.9; max-width: 420px; margin-bottom: 15px; }
 .handwritten { font-family: 'Caveat', cursive; color: var(--rose); font-size: 23px; display: block; margin-top: 20px; transform: rotate(-3deg); }
