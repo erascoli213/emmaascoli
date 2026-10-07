@@ -27,6 +27,10 @@
   --color-sage: var(--sage);
   --color-sage-ink: var(--sage-ink);
   --color-lilac: var(--lilac);
+  --color-work-bg: var(--work-bg);
+  --color-work-ink: var(--work-ink);
+  --color-work-muted: var(--work-muted);
+  --color-work-line: var(--work-line);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -82,6 +86,10 @@
   --paper: oklch(0.992 0.009 85);
   --terracotta: oklch(0.68 0.1 44);
   --soft-rose: oklch(0.86 0.052 10);
+  --work-bg: oklch(0.5 0.14 355);
+  --work-ink: oklch(0.975 0.018 78);
+  --work-muted: oklch(0.975 0.018 78 / 74%);
+  --work-line: oklch(0.975 0.018 78 / 34%);
   --shadow-tactile: 0 4px 0 oklch(0.47 0.085 348 / 16%);
   --shadow-device: 0 14px 30px oklch(0.28 0.04 150 / 17%);
   --card: oklch(1 0 0);
@@ -202,8 +210,18 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .loop-doodle { animation: doodle-sway 9s ease-in-out infinite alternate; }
 @keyframes doodle-sway { 0%,100% { transform: rotate(-4deg); } 50% { transform: rotate(5deg); } }
 .section-wrap { width: 89%; max-width: 1280px; margin: auto; }
-.work-section { padding-top: 72px; padding-bottom: 68px; position: relative; }
-.work-section::before { content: ''; position: absolute; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 1px; background: var(--foreground); opacity: .45; }
+.work-section { background: var(--work-bg); color: var(--work-ink); padding-top: 72px; padding-bottom: 68px; position: relative; }
+.work-section::before { content: ''; position: absolute; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 1px; background: var(--work-ink); opacity: .32; }
+.work-section .eyebrow { color: var(--work-muted); }
+.work-section .section-top h2 { color: var(--work-ink); }
+.work-section .pink-period { color: var(--pink); }
+.work-section .section-top > p { color: var(--work-muted); }
+.work-section .project-meta { color: var(--work-muted); }
+.work-section .project-heading h3 { color: var(--work-ink); }
+.work-section .project-card > p { color: var(--work-muted); }
+.work-section .concept-note { color: var(--work-muted); }
+.work-section .project-link { border-color: var(--work-line); color: var(--work-ink); }
+.work-section ::selection { background: var(--work-ink); color: var(--work-bg); }
 .section-top { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 36px; gap: 30px; }
 .section-top h2 { margin-top: 18px; font-size: 43px; line-height: 1.13; }
 .pink-period { color: var(--rose); }
