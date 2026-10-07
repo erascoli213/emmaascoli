@@ -4,6 +4,7 @@ import { ArrowDown, ArrowUpRight, ArrowRight, Heart, Hand, Plus, Minus } from 'l
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { StarDoodle, LoopDoodle, ProjectArt } from '@/components/portfolio-art';
+import emmaPortrait from '@/assets/emma-portrait.png.asset.json';
 import { projects } from '@/lib/projects';
 import logoAsset from '@/assets/pink-simple-logo.png.asset.json';
 
