@@ -211,7 +211,6 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 @keyframes doodle-sway { 0%,100% { transform: rotate(-4deg); } 50% { transform: rotate(5deg); } }
 .section-wrap { width: 89%; max-width: 1280px; margin: auto; }
 .work-section { background: var(--work-bg); color: var(--work-ink); padding-top: 86px; padding-bottom: 68px; position: relative; }
-.work-section::before { content: ''; position: absolute; top: 14px; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 1px; background: var(--work-ink); opacity: .38; }
 .work-section .eyebrow { color: var(--work-muted); }
 .work-section .section-top h2 { color: var(--work-ink); }
 .work-section .pink-period { color: var(--pink); }
