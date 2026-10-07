@@ -202,7 +202,8 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .loop-doodle { animation: doodle-sway 9s ease-in-out infinite alternate; }
 @keyframes doodle-sway { 0%,100% { transform: rotate(-4deg); } 50% { transform: rotate(5deg); } }
 .section-wrap { width: 89%; max-width: 1280px; margin: auto; }
-.work-section { padding-top: 88px; padding-bottom: 68px; }
+.work-section { padding-top: 88px; padding-bottom: 68px; position: relative; }
+.work-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--foreground); opacity: .45; }
 .section-top { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 36px; gap: 30px; }
 .section-top h2 { margin-top: 18px; font-size: 43px; line-height: 1.13; }
 .pink-period { color: var(--rose); }
