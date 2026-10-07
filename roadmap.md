@@ -1,4 +1,5 @@
 - [x] Remove hero side panel + bottom line, move doodles below name
 - [x] Remove navy border around hero
 - [x] Move doodles to the right edge of the hero (no image block)
+- [x] Delete hero star doodle; center the loop vertically on the right
 - [ ] Swap in Emma's real projects and contact details
