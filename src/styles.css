@@ -232,25 +232,24 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .sprout-art { background: var(--sage); color: var(--sage-ink); }
 .common-art { background: var(--lilac); color: var(--plum); }
 .access-art { background: var(--soft-rose); color: var(--plum); }
-.screenshot-cover { display: flex; align-items: center; justify-content: center; padding: 24px; }
-.screenshot-cover > img { width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; display: block; border-radius: 22px; border: 1px solid var(--plum); background: var(--paper); box-shadow: var(--shadow-device); transition: transform .5s cubic-bezier(.34,1.56,.64,1); }
-.project-image-button:hover .screenshot-cover > img { transform: translateY(-5px); }
-.scim-steps { display: flex; gap: 8px; padding: 0 17px; font-size: 5px; }
-.scim-steps > span { border: 1px solid var(--border); border-radius: 9px; padding: 3px 7px; white-space: nowrap; }
-.scim-steps .done { background: var(--sage); border-color: transparent; color: var(--sage-ink); }
-.scim-steps .now { background: var(--plum); border-color: transparent; color: var(--paper); }
-.scim-map { display: flex; align-items: center; gap: 6px; margin: 6px 17px 0; padding: 5px 8px; border: 1px solid var(--border); border-radius: 4px; font-size: 5px; background: var(--background); }
-.scim-map svg { width: 9px; height: 9px; opacity: .45; }
-.scim-map em { margin-left: auto; font-style: normal; color: var(--sage-ink); }
-.scim-status { display: flex; justify-content: space-between; margin: 3px 17px 0; font-size: 5px; }
-.scim-status b { font-weight: 500; color: var(--sage-ink); }
-.access-art .browser-mock { top: 78px; height: 228px; transform: none; }
-.project-image-button:hover .access-art .browser-mock { transform: translateY(-5px); }
-.access-art .mock-nav { padding: 9px 17px; }
-.access-art .mock-heading { padding: 3px 17px 8px; }
-.access-art .mock-heading h4 { font-size: 17px; margin: 4px 0; }
-.access-art .scim-map { margin-top: 4px; padding: 4px 8px; }
-.access-art .scim-status { margin-top: 2px; }
+.scim-shell { display: flex; height: calc(100% - 19px); }
+.scim-side { width: 31%; border-right: 1px solid var(--border); padding: 9px 10px; font-size: 5px; display: flex; flex-direction: column; gap: 6px; background: var(--background); }
+.scim-side strong { font-size: 6px; font-weight: 500; }
+.scim-active { color: var(--color-primary); font-weight: 500; }
+.scim-side em { font-style: normal; font-size: 4px; border: 1px solid var(--border); border-radius: 6px; padding: 1px 3px; }
+.scim-main { flex: 1; padding: 10px 12px; min-width: 0; }
+.scim-title { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+.scim-title h4 { font-family: var(--font-display); font-size: 12px; font-weight: 400; margin: 0; white-space: nowrap; }
+.scim-title .mock-nav-button { padding: 3px 8px; font-size: 4.5px; }
+.scim-rows { margin-top: 7px; }
+.scim-rows > div { display: flex; justify-content: space-between; align-items: center; font-size: 5px; padding: 3.5px 0; border-bottom: 1px solid var(--border); }
+.scim-rows b { font-weight: 500; }
+.scim-ok { color: var(--sage-ink); background: var(--sage); border-radius: 8px; padding: 2px 5px; font-size: 4.5px; }
+.scim-card { margin-top: 8px; border: 1px solid var(--border); border-radius: 7px; padding: 7px 8px; background: var(--background); }
+.scim-card strong { font-size: 5.5px; font-weight: 500; }
+.scim-card span { display: block; font-size: 4.5px; margin-top: 3px; color: color-mix(in oklab, var(--plum) 75%, transparent); }
+.scim-card a { display: block; margin-top: 4px; font-size: 5px; font-weight: 500; color: var(--rose); }
+.access-art .browser-mock { top: 70px; height: 236px; }
 @media(max-width:760px) { .access-art .browser-mock { top: 60px; height: 212px; } }
 .art-brand { position: absolute; top: 26px; left: 28px; display: flex; align-items: center; gap: 5px; font-family: var(--font-display); font-size: 26px; }
 .art-brand > svg { width: 22px; height: 22px; }
