@@ -367,3 +367,5 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .process-detail[hidden]{display:none}
 
 .case-dialog .art-caption { bottom: auto; top: 22px; left: auto; right: 22px; }
+
+@media(max-width:760px) { .case-dialog .access-art .browser-mock { top: 52px; height: 214px; } }
