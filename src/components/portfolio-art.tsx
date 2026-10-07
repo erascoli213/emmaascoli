@@ -1,4 +1,4 @@
-import { ArrowUpRight, Leaf, Plus, Heart, MapPin } from 'lucide-react';
+import { ArrowUpRight, ArrowRight, Leaf, Plus, Heart, MapPin, ShieldCheck } from 'lucide-react';
 
 export function StarDoodle({ className = '' }: { className?: string }) {
   return <svg className={`star-doodle ${className}`} viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="m48 19 8 23 25-2-20 16 8 24-21-14-20 15 7-24-20-14 25-1Z"/><path className="little-star" d="m77 4 4 11 12-1-9 8 3 11-10-6-9 7 3-12-9-7 12-1Z"/><path className="little-star" d="m17 62 4 10 11-1-9 7 3 10-9-6-9 7 3-11-9-6 11-1Z"/></svg>;
@@ -9,6 +9,20 @@ export function LoopDoodle({ className = '' }: { className?: string }) {
 }
 
 export function ProjectArt({ theme }: { theme: string }) {
+  if (theme === 'access') return <div className="project-art access-art" aria-label="Enterprise identity provisioning console mockup">
+    <span className="art-brand"><ShieldCheck size={22}/> provisioning</span>
+    <div className="browser-mock">
+      <div className="browser-bar"><span>● ● ●</span><small>console / identity provisioning</small><ArrowUpRight size={12}/></div>
+      <div className="mock-nav"><strong>identity ✳</strong><span>Directory &nbsp; Members</span><span className="mock-nav-button">Finish setup</span></div>
+      <div className="mock-heading"><span>SETUP WIZARD · STEP 2 OF 3</span><h4>Who gets in, and how.</h4><p>Connect your directory. See exactly what moves across.</p></div>
+      <div className="scim-steps"><span className="done">Provider settings ✓</span><span className="now">User attributes</span><span>Test &amp; finish</span></div>
+      <div className="scim-map"><span>email</span><ArrowRight/><span>email</span><em>✓</em></div>
+      <div className="scim-map"><span>firstName</span><ArrowRight/><span>name</span><em>✓</em></div>
+      <div className="scim-map"><span>groups</span><ArrowRight/><span>roles</span><em>✓</em></div>
+      <div className="scim-status"><span>Authentication <b>Verified</b></span><span>Authorization <b>Active</b></span><span>Logging <b>Configured</b></span></div>
+    </div>
+    <span className="art-caption">access that sets itself up</span>
+  </div>;
   if (theme === 'sprout') return <div className="project-art sprout-art" aria-label="Sprout plant care mobile app concept">
     <span className="art-brand"><Leaf size={24}/> sprout</span>
     <div className="leaf-illustration leaf-one"><Leaf/></div><div className="leaf-illustration leaf-two"><Leaf/></div>
