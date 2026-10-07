@@ -1,5 +1,4 @@
 import { ArrowUpRight, Leaf, Plus, Heart, MapPin } from 'lucide-react';
-import scimSso from '@/assets/scim/scim-sso.jpg.asset.json';
 
 export function StarDoodle({ className = '' }: { className?: string }) {
   return <svg className={`star-doodle ${className}`} viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="m48 19 8 23 25-2-20 16 8 24-21-14-20 15 7-24-20-14 25-1Z"/><path className="little-star" d="m77 4 4 11 12-1-9 8 3 11-10-6-9 7 3-12-9-7 12-1Z"/><path className="little-star" d="m17 62 4 10 11-1-9 7 3 10-9-6-9 7 3-11-9-6 11-1Z"/></svg>;
@@ -10,8 +9,36 @@ export function LoopDoodle({ className = '' }: { className?: string }) {
 }
 
 export function ProjectArt({ theme }: { theme: string }) {
-  if (theme === 'access') return <div className="project-art access-art screenshot-cover">
-    <img src={scimSso.url} alt="HCP single sign-on details with the Enable SCIM provisioning entry point"/>
+  if (theme === 'access') return <div className="project-art access-art" aria-label="Concept mock of HCP single sign-on details with the SCIM provisioning entry point">
+    <span className="art-brand">identity <span className="brand-flower">✳</span></span>
+    <div className="browser-mock">
+      <div className="browser-bar"><span>● ● ●</span><small>identity / organization / sso</small><ArrowUpRight size={12}/></div>
+      <div className="scim-shell">
+        <div className="scim-side">
+          <span>‹ Back to dashboard</span>
+          <strong>Organization settings</strong>
+          <span>Organization</span>
+          <span className="scim-active">SSO</span>
+          <span>SCIM provisioning <em>beta</em></span>
+        </div>
+        <div className="scim-main">
+          <div className="scim-title"><h4>Single sign-on details</h4><span className="mock-nav-button">Manage</span></div>
+          <div className="scim-rows">
+            <div><span>Status</span><b className="scim-ok">✓ Enabled</b></div>
+            <div><span>Identity protocol</span><b>SAML</b></div>
+            <div><span>Creation date</span><b>Feb 20, 2025</b></div>
+            <div><span>Owner</span><b>weidner.com</b></div>
+            <div><span>Default organization role</span><b>Admin</b></div>
+          </div>
+          <div className="scim-card">
+            <strong>SCIM provisioning within your SSO-enabled organization</strong>
+            <span>Connect your identity provider, and access arrives exactly as expected.</span>
+            <a>Enable SCIM provisioning <b>→</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span className="art-caption">access that sets itself up</span>
   </div>;
   if (theme === 'sprout') return <div className="project-art sprout-art" aria-label="Sprout plant care mobile app concept">
     <span className="art-brand"><Leaf size={24}/> sprout</span>
