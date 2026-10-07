@@ -2,5 +2,5 @@
 - [x] Remove navy border around hero
 - [x] Move doodles to the right edge of the hero (no image block)
 - [x] Delete hero star doodle; center the loop vertically on the right
-- [ ] Use Emma's uploaded pink logo in place of the typed "emmaascoli" wordmark (header, footer, browser tab icon)
+- [x] Use Emma's uploaded pink logo in place of the typed "emmaascoli" wordmark (header, footer, browser tab icon)
 - [ ] Swap in Emma's real projects and contact details
