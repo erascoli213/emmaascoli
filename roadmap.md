@@ -4,3 +4,4 @@
 - [x] Delete hero star doodle; center the loop vertically on the right
 - [x] Use Emma's uploaded pink logo in place of the typed "emmaascoli" wordmark (header, footer, browser tab icon)
 - [ ] Swap in Emma's real projects and contact details
+- [x] Recolor "Some cool work" section to Emma's dark pink (screenshot #704860) with readable text
