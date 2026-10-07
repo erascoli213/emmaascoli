@@ -86,9 +86,9 @@
   --paper: oklch(0.992 0.009 85);
   --terracotta: oklch(0.68 0.1 44);
   --soft-rose: oklch(0.86 0.052 10);
-  --work-bg: oklch(0.5 0.14 355);
+  --work-bg: oklch(0.455 0.064 343);
   --work-ink: oklch(0.975 0.018 78);
-  --work-muted: oklch(0.975 0.018 78 / 74%);
+  --work-muted: oklch(0.975 0.018 78 / 88%);
   --work-line: oklch(0.975 0.018 78 / 34%);
   --shadow-tactile: 0 4px 0 oklch(0.47 0.085 348 / 16%);
   --shadow-device: 0 14px 30px oklch(0.28 0.04 150 / 17%);
