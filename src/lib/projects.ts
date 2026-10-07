@@ -26,7 +26,7 @@ const accessStory: StorySection[] = [
 export const projects = [
   {
     slug: 'access-management', number: '01', kind: 'case',
-    name: 'Designing access management at scale', title: 'Secure, automated identity provisioning for HashiCorp Cloud Platform.',
+    name: 'Identity management at scale', title: 'Secure, automated identity provisioning for HashiCorp Cloud Platform.',
     description: 'Bringing SCIM to HCP, so enterprise admins can set up provisioning quickly — and trust the system once thousands of identities are syncing.',
     category: 'HashiCorp · Identity & Access Management', year: '2026', theme: 'access',
     story: accessStory,
