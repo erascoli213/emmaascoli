@@ -385,7 +385,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .project-card .art-caption { bottom: auto; top: 20px; left: auto; right: 22px; }
 .common-art .browser-mock { top: 70px; height: 236px; }
 .common-art .event-image { height: 40px; }
-.project-art { height: 372px; }
+.project-art { height: 380px; }
 @media(max-width:760px) { .access-art { height: 340px; } .common-art { height: 372px; } }
 
 /* Concept card: keep its window content inside the tilted frame */
