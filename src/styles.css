@@ -183,7 +183,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .site-header nav > a:hover::after { right: 0; }
 .nav-contact { border-radius: 999px; height: 41px; border-color: var(--foreground); background: transparent; padding: 0 19px; font-size: 12px; box-shadow: none; }
 .hero { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: minmax(0,1fr) 230px; align-items: center; width: 89%; }
-.hero-main { position: relative; padding: 105px 0 55px 11%; }
+.hero-main { position: relative; padding: 105px 0 72px 11%; }
 .hero-eyebrow,.eyebrow { font-size: 10px; font-weight: 500; letter-spacing: 1.6px; display: block; }
 .hero-eyebrow { display: flex; align-items: center; gap: 8px; margin-bottom: 24px; }
 .tiny-spark { font-size: 19px; color: var(--rose); }
@@ -202,8 +202,8 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .loop-doodle { animation: doodle-sway 9s ease-in-out infinite alternate; }
 @keyframes doodle-sway { 0%,100% { transform: rotate(-4deg); } 50% { transform: rotate(5deg); } }
 .section-wrap { width: 89%; max-width: 1280px; margin: auto; }
-.work-section { padding-top: 88px; padding-bottom: 68px; position: relative; }
-.work-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: var(--foreground); opacity: .45; }
+.work-section { padding-top: 72px; padding-bottom: 68px; position: relative; }
+.work-section::before { content: ''; position: absolute; top: 0; left: calc(50% - 50vw); right: calc(50% - 50vw); height: 1px; background: var(--foreground); opacity: .45; }
 .section-top { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 36px; gap: 30px; }
 .section-top h2 { margin-top: 18px; font-size: 43px; line-height: 1.13; }
 .pink-period { color: var(--rose); }
