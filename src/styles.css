@@ -455,6 +455,15 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-learnings-mark { color: var(--rose); font-size: 14px; line-height: 1.6; }
 @media (max-width: 760px) { .story-discovery { padding: 22px 18px 24px; border-radius: 22px; } .story-discovery-star { width: 32px; top: -14px; right: 14px; } .story-learnings-label { font-size: 22px; } .story-learnings-grid { grid-auto-flow: row; grid-template-columns: 1fr; } .story-learning-card { padding: 14px 15px 15px; } .story-learning-card p { font-size: 14px; } }
 @media (prefers-reduced-motion: reduce) { .story-discovery-star { animation: none; } .story-learning-card { transition: none; } .story-learning-card:hover { transform: none; } }
+.story-concepts { display: grid; gap: 16px; margin-top: 26px; }
+.story-concept-card { padding: 20px 22px 24px; border-radius: 24px; background: color-mix(in oklab, var(--soft-rose) 45%, var(--paper)); border: 1px solid color-mix(in oklab, var(--plum) 18%, transparent); box-shadow: var(--shadow-tactile); transition: transform .35s cubic-bezier(.34,1.56,.64,1); }
+.story-concept-card:hover { transform: translateY(-3px) rotate(-.3deg); }
+.story-concept-head { display: flex; gap: 9px; align-items: flex-start; }
+.story-concept-mark { color: var(--rose); font-size: 14px; line-height: 1.6; }
+.story-concept-title { margin: 0; font-size: 16px; line-height: 1.45; font-weight: 600; color: var(--plum); max-width: 62ch; }
+.story-concept-card .story-images { margin-top: 16px; }
+@media (max-width: 760px) { .story-concepts { gap: 14px; } .story-concept-card { padding: 16px 15px 18px; border-radius: 20px; } .story-concept-title { font-size: 15px; } }
+@media (prefers-reduced-motion: reduce) { .story-concept-card { transition: none; } .story-concept-card:hover { transform: none; } }
 .story-hook { margin-top: 26px; display: grid; gap: 22px; }
 .story-hook-line { font-family: "DM Serif Display", serif; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: var(--plum); width: 100%; }
 .story-hook-body { display: grid; gap: 12px; font-size: 16px; line-height: 1.7; max-width: 62ch; }

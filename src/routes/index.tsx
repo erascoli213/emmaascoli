@@ -8,18 +8,23 @@ import { StarDoodle, LoopDoodle, ProjectArt } from '@/components/portfolio-art';
 import { AboutCarousel } from '@/components/about-carousel';
 import { projects } from '@/lib/projects';
 import { ExpandableStudyImage } from '@/components/expandable-study-image';
-import type { StoryImage } from '@/lib/projects';
+import type { StoryConcept, StoryImage } from '@/lib/projects';
 import logoAsset from '@/assets/pink-simple-logo.png.asset.json';
 
-function StoryImages({ images }: { images: StoryImage[] }) {
+function StoryImages({ images, proportional }: { images: StoryImage[]; proportional?: boolean }) {
   const plain = images.filter((im) => !im.note);
   const noted = images.filter((im) => im.note);
+  const pairStyle = plain.length === 2 && plain[0] && plain[1]
+    ? (proportional
+      ? ({ gridTemplateColumns: `${plain[0].w}fr ${plain[1].w}fr` } as CSSProperties)
+      : ({ '--pair-aspect': `${plain[0].w} / ${plain[0].h}` } as CSSProperties))
+    : undefined;
   return (
     <>
       {plain.length > 0 && (
         <div
           className={plain.length === 2 ? 'story-images two' : plain.length > 2 ? 'story-images many' : 'story-images'}
-          style={plain.length === 2 && plain[0] ? ({ '--pair-aspect': `${plain[0].w} / ${plain[0].h}` } as CSSProperties) : undefined}
+          style={pairStyle}
         >
           {plain.map((im) => <ExpandableStudyImage key={im.src} image={im} />)}
         </div>
@@ -47,6 +52,19 @@ function StoryLearnings({ learnings }: { learnings: string[] }) {
       <ul className="story-learnings-grid">
         {learnings.map((l) => <li className="story-learning-card" key={l}><span className="story-learnings-mark" aria-hidden="true">✳</span><p>{l}</p></li>)}
       </ul>
+    </div>
+  );
+}
+
+function StoryConcepts({ concepts }: { concepts: StoryConcept[] }) {
+  return (
+    <div className="story-concepts">
+      {concepts.map((c) => (
+        <div className="story-concept-card" key={c.title}>
+          <div className="story-concept-head"><span className="story-concept-mark" aria-hidden="true">✳</span><h4 className="story-concept-title">{c.title}</h4></div>
+          <StoryImages images={c.images} proportional />
+        </div>
+      ))}
     </div>
   );
 }
@@ -84,7 +102,7 @@ function Index() {
         <section id="process" className="process-section"><div className="section-wrap"><div className="section-top"><div><span className="eyebrow">02 / THE WAY I WORK</span><h2>A curious process.<br/>A considered outcome.</h2></div><LoopDoodle className="process-loop"/></div><div className="process-grid">{process.map((step, i) => <div className="process-item" key={step.name}><span className="process-number">0{i + 1}</span><Button variant="ghost" className="process-toggle" onClick={() => setOpenProcess(openProcess === i ? null : i)} aria-expanded={openProcess === i}><span>{step.name}</span><span className="process-icon" aria-hidden="true"><Minus style={{display: openProcess === i ? undefined : 'none'}}/></span></Button><p>{step.note}</p><p className="process-detail" hidden={openProcess !== i}>{step.detail}</p></div>)}</div><div className="process-footer"><Heart size={16}/><span>Always collaborative. Never a straight line.</span><svg viewBox="0 0 200 24" fill="none" aria-hidden="true"><path d="M2 12c30-35 25 35 50 0s25 35 50 0 25 35 50 0 30 0 45 0" stroke="currentColor" strokeWidth="1.5"/></svg></div></div></section>
           <section id="about" className="about-section section-wrap"><div className="about-mark"><AboutCarousel/><StarDoodle className="about-star"/></div><div className="about-copy"><span className="eyebrow">03 / MORE ABOUT ME</span><h2>Hi, I’m Emma<span className="pink-period">.</span></h2><p>I’m a product designer who believes the best ideas happen when we stay curious and create together.</p><p>I care about the big picture and the little details, the thoughtful flow, the right words, the tiny moment that makes an experience feel human.<br/><br/>On a more personal note, I'm based in Boston, I love the outdoors (exploring national parks), have a 5 year old pup named Winston who I adore, and teach reformer pilates in my free time!</p><span className="handwritten">A little empathy goes a long way.</span></div></section>
       </main><footer className="site-footer"><a href="#home" className="site-logo" aria-label="Emma Ascoli home"><img src={logoAsset.url} alt="Emma Ascoli" width="1029" height="279"/></a><span>Made with curiosity & a little heart.</span><Button asChild variant="ghost" className="back-top"><a href="#home">Back to top <ArrowUpRight/></a></Button></footer>
-      <Dialog open={selected !== null} onOpenChange={(open) => { if (!open) setSelected(null); }}><DialogContent className="case-dialog">{selected && <><span className="eyebrow">{selected.kind === 'concept' ? 'INDEPENDENT CONCEPT' : ''}{selected.category}</span><DialogTitle className="case-title">{selected.name}</DialogTitle><DialogDescription className="case-description">{selected.title}</DialogDescription>{selected.hook ? <div className="story-hook"><p className="story-hook-line">{selected.hook.line}</p><div className="story-hook-body">{selected.hook.body.map((t) => <p key={t}>{t}</p>)}</div><dl className="story-glance">{selected.hook.glance.map((g) => <div key={g.label}><dt>{g.label}</dt><dd>{g.value}</dd></div>)}</dl><div className="story-hook-image"><ExpandableStudyImage image={selected.hook.image} /></div></div> : <ProjectArt theme={selected.theme}/>}{selected.story.length > 0 ? <div className="case-story">{selected.story.map((sec) => <section className={sec.learnings ? 'story-section story-discovery' : 'story-section'} key={sec.heading}>{sec.learnings && <StarDoodle className="story-discovery-star"/>}<span className="eyebrow">{sec.eyebrow}</span><h3 className="case-subheading">{sec.heading}</h3>{sec.body?.map((t) => <p key={t}>{t}</p>)}{sec.bullets && <StoryBullets bullets={sec.bullets} label={sec.learnings ? 'METHODS' : undefined} />}{sec.learnings && <StoryLearnings learnings={sec.learnings} />}{sec.highlight && <blockquote className="story-highlight">{sec.highlight}</blockquote>}{sec.images && <StoryImages images={sec.images} />}</section>)}</div> : <><div className="case-overview"><div><span className="eyebrow">THE PROBLEM</span><p>{selected.problem}</p></div><div><span className="eyebrow">THE OPPORTUNITY</span><p>{selected.goal}</p></div></div><h3 className="case-subheading">From first step to feeling confident.</h3><div className="case-flow">{selected.flow.map((step,i) => <div key={step}><span>0{i+1}</span><strong>{step}</strong>{i < 2 && <ArrowRight/>}</div>)}</div><h3 className="case-subheading">The thinking behind the details.</h3>{selected.decisions.map(([title,copy]) => <div className="case-decision" key={title}><h4>{title}</h4><p>{copy}</p></div>)}<div className="case-impact"><span className="eyebrow">INTENDED IMPACT & NEXT STEPS</span><p>{selected.impact}</p></div></>}</>}</DialogContent></Dialog>
+      <Dialog open={selected !== null} onOpenChange={(open) => { if (!open) setSelected(null); }}><DialogContent className="case-dialog">{selected && <><span className="eyebrow">{selected.kind === 'concept' ? 'INDEPENDENT CONCEPT' : ''}{selected.category}</span><DialogTitle className="case-title">{selected.name}</DialogTitle><DialogDescription className="case-description">{selected.title}</DialogDescription>{selected.hook ? <div className="story-hook"><p className="story-hook-line">{selected.hook.line}</p><div className="story-hook-body">{selected.hook.body.map((t) => <p key={t}>{t}</p>)}</div><dl className="story-glance">{selected.hook.glance.map((g) => <div key={g.label}><dt>{g.label}</dt><dd>{g.value}</dd></div>)}</dl><div className="story-hook-image"><ExpandableStudyImage image={selected.hook.image} /></div></div> : <ProjectArt theme={selected.theme}/>}{selected.story.length > 0 ? <div className="case-story">{selected.story.map((sec) => <section className={sec.learnings ? 'story-section story-discovery' : 'story-section'} key={sec.heading}>{sec.learnings && <StarDoodle className="story-discovery-star"/>}<span className="eyebrow">{sec.eyebrow}</span><h3 className="case-subheading">{sec.heading}</h3>{sec.body?.map((t) => <p key={t}>{t}</p>)}{sec.bullets && <StoryBullets bullets={sec.bullets} label={sec.learnings ? 'METHODS' : undefined} />}{sec.learnings && <StoryLearnings learnings={sec.learnings} />}{sec.concepts && <StoryConcepts concepts={sec.concepts} />}{sec.highlight && <blockquote className="story-highlight">{sec.highlight}</blockquote>}{sec.images && <StoryImages images={sec.images} />}</section>)}</div> : <><div className="case-overview"><div><span className="eyebrow">THE PROBLEM</span><p>{selected.problem}</p></div><div><span className="eyebrow">THE OPPORTUNITY</span><p>{selected.goal}</p></div></div><h3 className="case-subheading">From first step to feeling confident.</h3><div className="case-flow">{selected.flow.map((step,i) => <div key={step}><span>0{i+1}</span><strong>{step}</strong>{i < 2 && <ArrowRight/>}</div>)}</div><h3 className="case-subheading">The thinking behind the details.</h3>{selected.decisions.map(([title,copy]) => <div className="case-decision" key={title}><h4>{title}</h4><p>{copy}</p></div>)}<div className="case-impact"><span className="eyebrow">INTENDED IMPACT & NEXT STEPS</span><p>{selected.impact}</p></div></>}</>}</DialogContent></Dialog>
     </div>
   );
 }
