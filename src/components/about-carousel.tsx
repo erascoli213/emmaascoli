@@ -49,7 +49,7 @@ export function AboutCarousel() {
       </div>
       <div className="about-carousel-footer">
         <span className="about-carousel-caption" aria-live="polite">
-          {PHOTOS[index].caption}
+          {PHOTOS[index]?.caption}
         </span>
         <div className="about-carousel-dots" role="tablist" aria-label="About photos">
           {PHOTOS.map((photo, i) => (
