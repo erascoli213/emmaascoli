@@ -415,11 +415,10 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-images img { width: 100%; height: auto; display: block; border-radius: 14px; }
 @media (min-width: 761px) { .story-images.two img { aspect-ratio: var(--pair-aspect, auto); object-fit: cover; object-position: top; } }
 .story-images figcaption { margin-top: 9px; font-family: "Caveat", cursive; font-size: 19px; color: var(--rose); }
-.story-inline-row { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 30px; align-items: center; margin-top: 26px; }
-.story-inline-row figcaption { display: none; }
-.story-inline-note { margin: 0; font-size: 16px; line-height: 1.6; position: relative; padding-left: 27px; }
-.story-inline-note::before { content: '✳'; position: absolute; left: 0; top: 1px; color: var(--rose); font-size: 15px; }
-@media (max-width: 760px) { .story-images.two, .story-images.many { grid-template-columns: 1fr; } .story-highlight { font-size: 18px; } .case-story { gap: 34px; } .story-inline-row { grid-template-columns: 1fr; gap: 12px; } }
+.story-noted { display: grid; gap: 14px; margin-top: 26px; }
+.story-noted figcaption { display: none; }
+.story-note-bullets { margin-top: 0; font-size: 16px; }
+@media (max-width: 760px) { .story-images.two, .story-images.many { grid-template-columns: 1fr; } .story-highlight { font-size: 18px; } .case-story { gap: 34px; } .story-note-bullets { font-size: 15px; } }
 
 /* Tactile screenshot expansion, with an accessible nested reader. */
 .study-image-trigger { position: relative; display: block; width: 100%; height: auto; padding: 0; border-radius: 14px; background: transparent; white-space: normal; cursor: zoom-in; transition: transform .4s cubic-bezier(.34,1.56,.64,1); }

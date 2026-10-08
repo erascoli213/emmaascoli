@@ -25,9 +25,9 @@ function StoryImages({ images }: { images: StoryImage[] }) {
         </div>
       )}
       {noted.map((im) => (
-        <div className="story-inline-row" key={im.src}>
+        <div className="story-noted" key={im.src}>
+          <ul className="story-bullets story-note-bullets"><li>{im.note}</li></ul>
           <ExpandableStudyImage image={im} />
-          <p className="story-inline-note">{im.note}</p>
         </div>
       ))}
     </>
