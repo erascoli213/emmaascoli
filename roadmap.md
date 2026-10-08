@@ -30,3 +30,4 @@
 - [x] Remove sparkle decoration and edge shadows from all about photos, and decorative borders from story images, preserving image sizes and expansion.
 - [x] Trim the speckled glitter border off all 17 case-study screenshots (12px crop) and republish them; both studies and the expanded view verified clean, no page errors.
 - [x] Turn the disable-screenshot note into a bullet point sitting above its image (was beside it); verified the marker and order at 1065, no page errors.
+- [x] Put each "what we learned" finding in its own rounded card (2-up desktop, stacked phone) instead of one list panel; verified 3 cards SCIM, 4 cards Infragraph, no page errors.
