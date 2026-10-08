@@ -10,5 +10,6 @@
 <!-- LOVABLE:END -->
 
 - Keep the portfolio as a single scrolling index page with local, accessible case-study dialogs; the work is readable without a backend.
+- Render story screenshots through the shared ExpandableStudyImage presentation component with nested accessible dialogs so enlargement preserves the reader’s position and focus.
 - Keep concept-study content in a browser-safe data module and project illustrations in a shared presentation module; reusable mockups stay consistent between cards and case studies.
 - Label sample projects as independent concepts and never present hypothetical outcomes as measured results; real portfolio facts must come from the owner.
