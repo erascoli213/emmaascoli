@@ -24,3 +24,4 @@
 - [x] Let the case-study opening line run the full width of the card (removed the 30ch cap); verified at 1280 and 390, no page errors.
 - [x] Delete the "Let's make something thoughtful, together" contact section; about now flows into the footer. Verified at 1280 and 390, no page errors.
 - [x] Use Emma's four photo captions in order and keep the photo frame one fixed size whatever the caption length (about-mark no longer fit-content); verified 430x538 desktop / 343x429 phone on all four.
+- [x] Trim the glittery speckled edge off the dog, pilates and Celtics photos and republish them; frame size unchanged, all four photos verified loading.
