@@ -4,14 +4,14 @@ import scimToken from '@/assets/scim/scim-token.jpg.asset.json';
 import scimDisable from '@/assets/scim/scim-disable.jpg.asset.json';
 import scimUsers from '@/assets/scim/scim-users.jpg.asset.json';
 import scimGuide from '@/assets/scim/scim-guide.jpg.asset.json';
-import qcOverview from '@/assets/qc-fixed/qc-infragraph-overview.jpg.asset.json';
-import qcBuilder from '@/assets/qc-fixed/qc-infragraph-builder.jpg.asset.json';
-import qcGrafanaSave from '@/assets/qc-fixed/qc-grafana-save.jpg.asset.json';
-import qcGrafanaTags from '@/assets/qc-fixed/qc-grafana-tags.jpg.asset.json';
-import qcFlow from '@/assets/qc-fixed/qc-flow-diagram.jpg.asset.json';
-import qcCatalog from '@/assets/qc-fixed/qc-query-catalog.jpg.asset.json';
-import qcBuilderCatalog from '@/assets/qc-fixed/qc-builder-catalog.jpg.asset.json';
-import qcSave from '@/assets/qc-fixed/qc-save-dialog.jpg.asset.json';
+import qcOverview from '@/assets/qc-exports/qc-infragraph-overview.png.asset.json';
+import qcBuilder from '@/assets/qc-exports/qc-infragraph-builder.png.asset.json';
+import qcGrafanaSave from '@/assets/qc-exports/qc-grafana-save.png.asset.json';
+import qcGrafanaTags from '@/assets/qc-exports/qc-grafana-tags.png.asset.json';
+import qcFoundationsBuilder from '@/assets/qc-exports/qc-foundations-builder.png.asset.json';
+import qcCatalog from '@/assets/qc-exports/qc-query-catalog.png.asset.json';
+import qcBuilderCatalog from '@/assets/qc-exports/qc-builder-catalog.png.asset.json';
+import qcSave from '@/assets/qc-exports/qc-save-dialog.png.asset.json';
 
 export type StoryImage = { src: string; alt: string; caption: string };
 export type StorySection = { eyebrow: string; heading: string; body?: string[]; bullets?: string[]; images?: StoryImage[]; highlight?: string };
@@ -38,7 +38,7 @@ const queryStory: StorySection[] = [
   { eyebrow: 'Overview', heading: 'The who', bullets: ['Platform Engineers monitoring infrastructure health', 'Security Engineers tracking compliance and ownership'] },
   { eyebrow: 'Overview', heading: 'The what', body: ['Move beyond one-off exploration to shared, persistent insights.'], highlight: 'How might we enable users to save, share, and revisit infrastructure queries to track resource health over time?' },
   { eyebrow: 'Discovery', heading: 'The methods & what we learned', bullets: ['Competitive analysis: JupiterOne, Grafana, Wiz', 'Continuous feedback through our Lighthouse customer program', 'Learned: the query builder and catalog must feel deeply connected', 'Learned: saved queries need clear categorization (tags)', 'Learned: teams want scoped sharing, not org-wide by default', 'Learned: value comes from tracking health trends over time'], images: [{ src: qcGrafanaSave.url, alt: 'Grafana saved queries screen from competitive analysis', caption: 'Competitive analysis — saving in Grafana' }, { src: qcGrafanaTags.url, alt: 'Grafana tags screen from competitive analysis', caption: 'Competitive analysis — tags in Grafana' }] },
-  { eyebrow: 'Ideation: Round 1', heading: 'Foundations', bullets: ['Where do they live?', 'What do we call this system?', 'How are queries saved?'], images: [{ src: qcFlow.url, alt: 'Flow diagram for saving and finding queries', caption: 'Mapping the foundational flows' }, { src: qcCatalog.url, alt: 'Query catalog screen with saved queries', caption: 'The first query catalog' }] },
+  { eyebrow: 'Ideation: Round 1', heading: 'Foundations', bullets: ['Where do they live?', 'What do we call this system?', 'How are queries saved?'], images: [{ src: qcFoundationsBuilder.url, alt: 'Query builder with a save to query catalog action', caption: 'Saving from the query builder' }, { src: qcCatalog.url, alt: 'Query catalog screen with saved queries', caption: 'The first query catalog' }] },
   { eyebrow: 'Ideation: Round 1', heading: 'The result…', body: ['The flows set a strong foundation — but where could we really provide value?'], highlight: 'We revisited our Lighthouse customer conversations to find the next step.' },
   { eyebrow: 'Ideation: Round 2', heading: 'The value add', bullets: ['A deeply connected query builder and catalog', 'Categorization with tags'], images: [{ src: qcBuilderCatalog.url, alt: 'Query builder connected to the catalog', caption: 'Builder and catalog, side by side' }, { src: qcSave.url, alt: 'Save query dialog with tags', caption: 'Saving a query, with tags' }] },
   { eyebrow: 'What’s next', heading: 'Where we’re headed', bullets: ['Scoped sharing', 'Health trends over time'] },
