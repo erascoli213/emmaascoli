@@ -1,4 +1,4 @@
-import { ArrowUpRight, Leaf, Plus, Heart, MapPin } from 'lucide-react';
+import { ArrowUpRight, Leaf, Plus, Heart } from 'lucide-react';
 
 export function StarDoodle({ className = '' }: { className?: string }) {
   return <svg className={`star-doodle ${className}`} viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="m48 19 8 23 25-2-20 16 8 24-21-14-20 15 7-24-20-14 25-1Z"/><path className="little-star" d="m77 4 4 11 12-1-9 8 3 11-10-6-9 7 3-12-9-7 12-1Z"/><path className="little-star" d="m17 62 4 10 11-1-9 7 3 10-9-6-9 7 3-11-9-6 11-1Z"/></svg>;
