@@ -78,10 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Emma Ascoli — Product Designer" },
+      { title: "Emma Ascoli · Product Designer" },
       { name: "description", content: "Thoughtful product design rooted in curiosity and collaboration." },
       { name: "author", content: "Emma Ascoli" },
-      { property: "og:title", content: "Emma Ascoli — Product Designer" },
+      { property: "og:title", content: "Emma Ascoli · Product Designer" },
       { property: "og:description", content: "Thoughtful product design rooted in curiosity and collaboration." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
