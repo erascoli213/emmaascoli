@@ -15,3 +15,5 @@
 - [x] Keep the case-study card title on one line; move the handwritten note and floating arrow clear of the artwork (both cards, all widths)
 - [x] Add all SCIM PDF content and images to case study
 - [x] Add and verify playful image expansion in both case studies.
+
+- [x] Replace the SCIM story images with all ten owner-provided exports, keeping the illustrated cover and expansion.
