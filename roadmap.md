@@ -21,3 +21,4 @@
 - [x] Verify paired image rows at 1280 and 1065, no console errors.
 - [x] Move SCIM round-2 bullets 2 & 3 inline beside their screenshots; verify layout at 1280 and 390.
 - [x] Give the "methods & what we learned" section its own panel: labelled methods pill + pink "what we learned" card; verified at 1280 and 390, no console errors.
+- [x] Let the case-study opening line run the full width of the card (removed the 30ch cap); verified at 1280 and 390, no page errors.
