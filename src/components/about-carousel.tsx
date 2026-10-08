@@ -5,10 +5,10 @@ import pilates from '@/assets/about/pilates.png.asset.json';
 import dog from '@/assets/about/dog.png.asset.json';
 
 const PHOTOS = [
-  { url: emmaPortrait.url, alt: 'Emma Ascoli outdoors at Bryce Canyon', caption: 'exploring national parks' },
-  { url: dog.url, alt: 'Winston, a golden retriever, sitting in front of blue hydrangeas', caption: 'winston, my 5 year old pup' },
-  { url: pilates.url, alt: 'A reformer pilates studio', caption: 'teaching reformer pilates' },
-  { url: celtics.url, alt: 'A Celtics game at TD Garden', caption: 'go celtics!' },
+  { url: emmaPortrait.url, alt: 'Emma Ascoli outdoors at Bryce Canyon', caption: 'bryce canyon national park' },
+  { url: dog.url, alt: 'Winston, a golden retriever, sitting in front of blue hydrangeas', caption: 'winny pup (who acts like one)' },
+  { url: pilates.url, alt: 'A reformer pilates studio', caption: 'my second home 🫶' },
+  { url: celtics.url, alt: 'A Celtics game at TD Garden', caption: 'Go Celtics!' },
 ] as const;
 
 const INTERVAL_MS = 4200;

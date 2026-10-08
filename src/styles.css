@@ -329,16 +329,17 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .process-footer > svg:last-child { width: 90px; height: 23px; margin-left: 12px; }
 .about-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; padding-top: 90px; padding-bottom: 90px; align-items: center; }
 .about-mark { position: relative; width: fit-content; }
-.about-carousel { width: 100%; max-width: 430px; transform: rotate(-1.2deg); }
+.about-carousel { width: 100%; max-width: 430px; min-width: 0; transform: rotate(-1.2deg); }
 .about-carousel-frame { position: relative; aspect-ratio: 4 / 5; border-radius: 26px; overflow: hidden; box-shadow: var(--shadow-device); }
 .about-carousel-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06) rotate(1.5deg); transition: opacity .7s ease, transform .9s cubic-bezier(.34, 1.56, .64, 1); pointer-events: none; }
 .about-carousel-frame img.is-active { opacity: 1; transform: scale(1) rotate(0deg); }
-.about-carousel-footer { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 14px; padding-inline: 4px; }
-.about-carousel-caption { font-family: "Caveat", cursive; font-size: 24px; color: var(--rose); transform: rotate(-1.4deg); }
-.about-carousel-dots { display: flex; gap: 8px; }
+.about-carousel-footer { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 14px; padding-inline: 4px; min-height: 38px; }
+.about-carousel-caption { font-family: "Caveat", cursive; font-size: 24px; line-height: 1.15; color: var(--rose); transform: rotate(-1.4deg); min-width: 0; overflow-wrap: anywhere; }
+.about-carousel-dots { display: flex; gap: 8px; flex: none; }
 .about-carousel-dots button { width: 12px; height: 12px; border-radius: 999px; border: 1.5px solid var(--plum); background: transparent; padding: 0; cursor: pointer; transition: transform .35s cubic-bezier(.34, 1.56, .64, 1), background .25s ease; }
 .about-carousel-dots button:hover { transform: scale(1.35); }
 .about-carousel-dots button.is-active { background: var(--rose); border-color: var(--rose); transform: scale(1.25); }
+@media (max-width: 760px) { .about-carousel-caption { font-size: 20px; } .about-carousel-footer { min-height: 32px; } }
 @media (prefers-reduced-motion: reduce) { .about-carousel-frame img { transition: none; } }
 .about-star { position: absolute; top: -26px; right: -14px; width: 62px; color: var(--rose); animation: doodle-sway 5s ease-in-out infinite; }
 .about-copy h2 { font-size: 43px; margin: 15px 0 20px; }
