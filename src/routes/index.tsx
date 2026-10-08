@@ -8,18 +8,23 @@ import { StarDoodle, LoopDoodle, ProjectArt } from '@/components/portfolio-art';
 import { AboutCarousel } from '@/components/about-carousel';
 import { projects } from '@/lib/projects';
 import { ExpandableStudyImage } from '@/components/expandable-study-image';
-import type { StoryImage } from '@/lib/projects';
+import type { StoryConcept, StoryImage } from '@/lib/projects';
 import logoAsset from '@/assets/pink-simple-logo.png.asset.json';
 
-function StoryImages({ images }: { images: StoryImage[] }) {
+function StoryImages({ images, proportional }: { images: StoryImage[]; proportional?: boolean }) {
   const plain = images.filter((im) => !im.note);
   const noted = images.filter((im) => im.note);
+  const pairStyle = plain.length === 2 && plain[0] && plain[1]
+    ? (proportional
+      ? ({ gridTemplateColumns: `${plain[0].w}fr ${plain[1].w}fr` } as CSSProperties)
+      : ({ '--pair-aspect': `${plain[0].w} / ${plain[0].h}` } as CSSProperties))
+    : undefined;
   return (
     <>
       {plain.length > 0 && (
         <div
           className={plain.length === 2 ? 'story-images two' : plain.length > 2 ? 'story-images many' : 'story-images'}
-          style={plain.length === 2 && plain[0] ? ({ '--pair-aspect': `${plain[0].w} / ${plain[0].h}` } as CSSProperties) : undefined}
+          style={pairStyle}
         >
           {plain.map((im) => <ExpandableStudyImage key={im.src} image={im} />)}
         </div>
@@ -47,6 +52,19 @@ function StoryLearnings({ learnings }: { learnings: string[] }) {
       <ul className="story-learnings-grid">
         {learnings.map((l) => <li className="story-learning-card" key={l}><span className="story-learnings-mark" aria-hidden="true">✳</span><p>{l}</p></li>)}
       </ul>
+    </div>
+  );
+}
+
+function StoryConcepts({ concepts }: { concepts: StoryConcept[] }) {
+  return (
+    <div className="story-concepts">
+      {concepts.map((c) => (
+        <div className="story-concept-card" key={c.title}>
+          <div className="story-concept-head"><span className="story-concept-mark" aria-hidden="true">✳</span><h4 className="story-concept-title">{c.title}</h4></div>
+          <StoryImages images={c.images} proportional />
+        </div>
+      ))}
     </div>
   );
 }
