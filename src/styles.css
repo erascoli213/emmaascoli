@@ -436,3 +436,17 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 @keyframes image-pop { from { opacity: 0; scale: .9; } to { opacity: 1; scale: 1; } }
 @media(max-width:760px) { .image-lightbox { padding: 14px; width: calc(100vw - 20px); } .image-lightbox-caption { font-size: 22px; } .image-lightbox > button:last-child { top: 14px; right: 14px; } }
 @media(prefers-reduced-motion:reduce) { .study-image-trigger, .image-expand-bubble, .image-zoom-button { transition: none; } .image-lightbox[data-state=open] { animation: none; } .study-image-trigger:hover { transform: none; } }
+
+/* Discovery: its own panel, with the methods and the learnings read apart */
+.story-discovery { position: relative; margin-block: 12px; padding: 30px 30px 32px; border: 1px solid color-mix(in oklab, var(--plum) 22%, transparent); border-radius: 28px; background: var(--paper); box-shadow: var(--shadow-device); }
+.story-discovery-star { position: absolute; top: -20px; right: 24px; width: 44px; color: var(--pink); animation: doodle-sway 5s ease-in-out infinite; }
+.story-methods { margin-top: 18px; }
+.story-methods-label { display: inline-block; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--rose); border: 1px solid color-mix(in oklab, var(--rose) 42%, transparent); border-radius: 999px; padding: 5px 13px; }
+.story-methods .story-bullets { margin-top: 13px; }
+.story-learnings { margin-top: 26px; padding: 20px 24px 22px; border-radius: 22px; background: color-mix(in oklab, var(--soft-rose) 62%, var(--paper)); border: 1px solid color-mix(in oklab, var(--plum) 18%, transparent); }
+.story-learnings-label { display: block; font-family: 'Caveat', cursive; font-size: 26px; line-height: 1.1; color: var(--rose); transform: rotate(-1.4deg); }
+.story-learnings-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 11px; }
+.story-learnings-list li { display: flex; gap: 11px; align-items: flex-start; font-size: 15px; line-height: 1.55; }
+.story-learnings-mark { color: var(--rose); font-size: 14px; line-height: 1.7; }
+@media (max-width: 760px) { .story-discovery { padding: 22px 18px 24px; border-radius: 22px; } .story-discovery-star { width: 32px; top: -14px; right: 14px; } .story-learnings { padding: 16px 16px 18px; } .story-learnings-label { font-size: 22px; } .story-learnings-list li { font-size: 14px; } }
+@media (prefers-reduced-motion: reduce) { .story-discovery-star { animation: none; } }

@@ -10,7 +10,7 @@
 - [x] Remove the thin line at the top of the work section
 - [x] Build case study 01 "Designing access management at scale" from Emma's SCIM deck; artwork fits its card and the phone case-study view (both cards)
 - [ ] Confirm real details for case study 01: year, product/client context (her deck had placeholder tables, so no results are shown)
-- [ ] Decide what happens to Common Ground (placeholder concept) next to her real work — keep, replace with a second real study, or remove
+- [x] Replace Common Ground with the real Infragraph query catalog study (same layout as SCIM)
 - [ ] Swap in Emma's real projects and contact details when she sends them
 - [x] Keep the case-study card title on one line; move the handwritten note and floating arrow clear of the artwork (both cards, all widths)
 - [x] Add all SCIM PDF content and images to case study
@@ -20,3 +20,4 @@
 - [x] Make paired case-study images equal height without cropping the left image (aspect-locked rows).
 - [x] Verify paired image rows at 1280 and 1065, no console errors.
 - [x] Move SCIM round-2 bullets 2 & 3 inline beside their screenshots; verify layout at 1280 and 390.
+- [x] Give the "methods & what we learned" section its own panel: labelled methods pill + pink "what we learned" card; verified at 1280 and 390, no console errors.
