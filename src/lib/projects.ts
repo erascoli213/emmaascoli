@@ -48,7 +48,7 @@ const queryStory: StorySection[] = [
 
 export const projects = [
   {
-    slug: 'access-management', number: '01', kind: 'case',
+    slug: 'access-management', number: '01', kind: 'case' as 'case' | 'concept',
     name: 'Identity management at scale', title: 'Secure, automated identity provisioning for HashiCorp Cloud Platform.',
     description: 'Bringing SCIM to HCP, so enterprise admins can set up provisioning quickly — and trust the system once thousands of identities are syncing.',
     category: 'HashiCorp · Identity & Access Management', year: '2026', theme: 'access',
@@ -56,7 +56,7 @@ export const projects = [
     problem: '', goal: '', flow: [] as string[], decisions: [] as (readonly [string, string])[], impact: '',
   },
   {
-    slug: 'query-catalog', number: '02', kind: 'case',
+    slug: 'query-catalog', number: '02', kind: 'case' as 'case' | 'concept',
     name: 'A shared query catalog', title: 'Designing a shared query system to track infrastructure health over time.',
     description: 'Turning one-off infrastructure questions in Infragraph into saved, shared insights teams can revisit over time.',
     category: 'HashiCorp · Infragraph', year: '2026', theme: 'common',
