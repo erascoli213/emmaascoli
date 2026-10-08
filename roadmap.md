@@ -26,3 +26,4 @@
 - [x] Use Emma's four photo captions in order and keep the photo frame one fixed size whatever the caption length (about-mark no longer fit-content); verified 430x538 desktop / 343x429 phone on all four.
 - [x] Trim the glittery speckled edge off the dog, pilates and Celtics photos and republish them; frame size unchanged, all four photos verified loading.
 - [x] Remove the plus sign from every process step; the minus still shows only on an open step; verified all four steps and no page errors.
+- [x] Delete the "Independent concepts are marked as such" note under the work cards; verified the two cards remain and no page errors.
