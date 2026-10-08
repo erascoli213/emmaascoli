@@ -7,8 +7,32 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/compone
 import { StarDoodle, LoopDoodle, ProjectArt } from '@/components/portfolio-art';
 import emmaPortrait from '@/assets/emma-portrait.png.asset.json';
 import { projects } from '@/lib/projects';
-import { ExpandableStudyImage } from '@/components/expandable-study-image';
+import logoAsset from '@/assets/pink-simple-logo.png.asset.json';
+
+function StoryImages({ images }: { images: StoryImage[] }) {
+  const plain = images.filter((im) => !im.note);
+  const noted = images.filter((im) => im.note);
+  return (
+    <>
+      {plain.length > 0 && (
+        <div
+          className={plain.length === 2 ? 'story-images two' : plain.length > 2 ? 'story-images many' : 'story-images'}
+          style={plain.length === 2 ? ({ '--pair-aspect': `${plain[0].w} / ${plain[0].h}` } as CSSProperties) : undefined}
+        >
+          {plain.map((im) => <ExpandableStudyImage key={im.src} image={im} />)}
+        </div>
+      )}
+      {noted.map((im) => (
+        <div className="story-inline-row" key={im.src}>
+          <ExpandableStudyImage image={im} />
+          <p className="story-inline-note">{im.note}</p>
+        </div>
+      ))}
+    </>
+  );
+}
 import type { StoryImage } from '@/lib/projects';
+import logoAsset from '@/assets/pink-simple-logo.png.asset.json';
 import logoAsset from '@/assets/pink-simple-logo.png.asset.json';
 
 export const Route = createFileRoute("/")({
