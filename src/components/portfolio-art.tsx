@@ -1,4 +1,4 @@
-import { ArrowUpRight, Leaf, Plus, Heart, MapPin } from 'lucide-react';
+import { ArrowUpRight, Leaf, Plus, Heart } from 'lucide-react';
 
 export function StarDoodle({ className = '' }: { className?: string }) {
   return <svg className={`star-doodle ${className}`} viewBox="0 0 100 100" fill="currentColor" aria-hidden="true"><path d="m48 19 8 23 25-2-20 16 8 24-21-14-20 15 7-24-20-14 25-1Z"/><path className="little-star" d="m77 4 4 11 12-1-9 8 3 11-10-6-9 7 3-12-9-7 12-1Z"/><path className="little-star" d="m17 62 4 10 11-1-9 7 3 10-9-6-9 7 3-11-9-6 11-1Z"/></svg>;
@@ -47,5 +47,34 @@ export function ProjectArt({ theme }: { theme: string }) {
     <div className="phone phone-front"><div className="phone-camera"/><div className="phone-top"><span>Good morning, Alex</span><span>☀</span></div><h4>Let’s grow<br/>something good.</h4><div className="plant-hero"><Leaf/></div><div className="care-panel"><span>A little love for your Monstera</span><strong>Time for a drink 💧</strong><div className="mock-action">Mark as watered <span>✓</span></div></div><div className="phone-nav"><Leaf size={15}/><Heart size={15}/><span>◌</span></div></div>
     <span className="art-caption">a happier kind of plant care</span>
   </div>;
-  return <div className="project-art common-art" aria-label="Common Ground community discovery website concept"><span className="art-brand">query catalog{'\n'}✳</span><div className="browser-mock"><div className="browser-bar"><span>● ● ●</span><small>commonground / discover</small><ArrowUpRight size={12}/></div><div className="mock-nav"><strong>common ground ✳</strong><span>Explore &nbsp; Our story</span><span className="mock-nav-button">Find your people</span></div><div className="mock-heading"><span>A little closer, together.</span><h4>Your city.<br/>Your kind of people.</h4><p>Good company is just around the corner.</p></div><div className="event-grid"><div className="event-mini"><div className="event-image pottery"><span>◒</span><span>◓</span></div><strong>A slow Sunday, in clay</strong><span><MapPin size={8}/> The pottery studio</span></div><div className="event-mini"><div className="event-image garden"><Leaf/><span>✳</span></div><strong>Grow something together</strong><span><MapPin size={8}/> Community garden</span></div><div className="event-mini"><div className="event-image coffee"><span>☕</span></div><strong>Coffee & new connections</strong><span><MapPin size={8}/> Your neighborhood</span></div></div></div><span className="art-caption">a place to find your people</span></div>;
+  return <div className="project-art common-art" aria-label="Illustrated Infragraph query catalog screen">
+    <span className="art-brand">query catalog{'\n'}✳</span>
+    <div className="browser-mock">
+      <div className="browser-bar"><span>● ● ●</span><small>infragraph / query catalog</small><ArrowUpRight size={12}/></div>
+      <div className="scim-shell">
+        <div className="scim-side">
+          <strong>Infragraph</strong>
+          <span>Overview</span>
+          <span>Query builder</span>
+          <span className="scim-active">Query catalog</span>
+          <span>Inventory</span>
+        </div>
+        <div className="scim-main">
+          <div className="scim-title"><h4>Query catalog</h4><span className="mock-nav-button">+ New query</span></div>
+          <div className="scim-rows">
+            <div><span>Resources without an owner</span><b className="scim-ok">Security</b></div>
+            <div><span>Outdated AMIs in production</span><b>Health</b></div>
+            <div><span>Not provisioned by Terraform</span><b>Compliance</b></div>
+            <div><span>Untagged S3 buckets</span><b>Security</b></div>
+          </div>
+          <div className="scim-card">
+            <strong>Save it once. Check in anytime.</strong>
+            <span>Share questions with your team and track health over time.</span>
+            <a>Open in query builder <b>→</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span className="art-caption">questions worth keeping</span>
+  </div>;
 }
