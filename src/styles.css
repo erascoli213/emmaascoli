@@ -448,10 +448,10 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-methods .story-bullets { margin-top: 13px; }
 .story-learnings { margin-top: 28px; }
 .story-learnings-label { display: inline-block; font-family: 'Caveat', cursive; font-size: 26px; line-height: 1.1; color: var(--rose); transform: rotate(-1.4deg); }
-.story-learnings-grid { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.story-learning-card { display: flex; gap: 10px; align-items: flex-start; padding: 16px 18px 17px; border-radius: 20px; background: color-mix(in oklab, var(--soft-rose) 62%, var(--paper)); border: 1px solid color-mix(in oklab, var(--plum) 18%, transparent); box-shadow: var(--shadow-tactile); transition: transform .35s cubic-bezier(.34,1.56,.64,1); }
+.story-learnings-grid { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: 10px; }
+.story-learning-card { display: flex; gap: 8px; align-items: flex-start; padding: 14px 13px 15px; border-radius: 18px; background: color-mix(in oklab, var(--soft-rose) 62%, var(--paper)); border: 1px solid color-mix(in oklab, var(--plum) 18%, transparent); box-shadow: var(--shadow-tactile); transition: transform .35s cubic-bezier(.34,1.56,.64,1); }
 .story-learning-card:hover { transform: translateY(-3px) rotate(-.4deg); }
-.story-learning-card p { margin: 0; font-size: 15px; line-height: 1.55; }
+.story-learning-card p { margin: 0; font-size: 13.5px; line-height: 1.5; }
 .story-learnings-mark { color: var(--rose); font-size: 14px; line-height: 1.6; }
 @media (max-width: 760px) { .story-discovery { padding: 22px 18px 24px; border-radius: 22px; } .story-discovery-star { width: 32px; top: -14px; right: 14px; } .story-learnings-label { font-size: 22px; } .story-learnings-grid { grid-template-columns: 1fr; } .story-learning-card { padding: 14px 15px 15px; } .story-learning-card p { font-size: 14px; } }
 @media (prefers-reduced-motion: reduce) { .story-discovery-star { animation: none; } .story-learning-card { transition: none; } .story-learning-card:hover { transform: none; } }
