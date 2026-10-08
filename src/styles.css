@@ -453,7 +453,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-learning-card:hover { transform: translateY(-3px) rotate(-.4deg); }
 .story-learning-card p { margin: 0; font-size: 13.5px; line-height: 1.5; }
 .story-learnings-mark { color: var(--rose); font-size: 14px; line-height: 1.6; }
-@media (max-width: 760px) { .story-discovery { padding: 22px 18px 24px; border-radius: 22px; } .story-discovery-star { width: 32px; top: -14px; right: 14px; } .story-learnings-label { font-size: 22px; } .story-learnings-grid { grid-template-columns: 1fr; } .story-learning-card { padding: 14px 15px 15px; } .story-learning-card p { font-size: 14px; } }
+@media (max-width: 760px) { .story-discovery { padding: 22px 18px 24px; border-radius: 22px; } .story-discovery-star { width: 32px; top: -14px; right: 14px; } .story-learnings-label { font-size: 22px; } .story-learnings-grid { grid-auto-flow: row; grid-template-columns: 1fr; } .story-learning-card { padding: 14px 15px 15px; } .story-learning-card p { font-size: 14px; } }
 @media (prefers-reduced-motion: reduce) { .story-discovery-star { animation: none; } .story-learning-card { transition: none; } .story-learning-card:hover { transform: none; } }
 .story-hook { margin-top: 26px; display: grid; gap: 22px; }
 .story-hook-line { font-family: "DM Serif Display", serif; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: var(--plum); width: 100%; }
