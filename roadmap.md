@@ -33,3 +33,5 @@
 - [x] Put each "what we learned" finding in its own rounded card (2-up desktop, stacked phone) instead of one list panel; verified 3 cards SCIM, 4 cards Infragraph, no page errors.
 
 - 2026-10-08: Findings cards now sit on one line (3 in SCIM study, 4 in Infragraph study); still stack on phone.
+
+- 2026-10-08: Round 2 of both studies now shows each concept in its own card (soft rose, rounded, ✳ + plum title) with its screenshots inside; verified 2 cards per study, lightbox works from inside cards, stacks on phone.
