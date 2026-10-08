@@ -450,3 +450,12 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-learnings-mark { color: var(--rose); font-size: 14px; line-height: 1.7; }
 @media (max-width: 760px) { .story-discovery { padding: 22px 18px 24px; border-radius: 22px; } .story-discovery-star { width: 32px; top: -14px; right: 14px; } .story-learnings { padding: 16px 16px 18px; } .story-learnings-label { font-size: 22px; } .story-learnings-list li { font-size: 14px; } }
 @media (prefers-reduced-motion: reduce) { .story-discovery-star { animation: none; } }
+.story-hook { margin-top: 26px; display: grid; gap: 22px; }
+.story-hook-line { font-family: "DM Serif Display", serif; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: var(--plum); max-width: 30ch; }
+.story-hook-body { display: grid; gap: 12px; font-size: 16px; line-height: 1.7; max-width: 62ch; }
+.story-glance { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; }
+.story-glance > div { padding: 16px 18px; border-radius: 20px; background: color-mix(in oklab, var(--soft-rose) 55%, var(--paper)); border: 1px solid color-mix(in oklab, var(--plum) 16%, transparent); }
+.story-glance dt { font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--rose); font-weight: 600; }
+.story-glance dd { margin: 6px 0 0; font-size: 14px; line-height: 1.45; }
+.story-hook-image { margin-top: 6px; }
+@media (max-width: 760px) { .story-glance { grid-template-columns: 1fr; } .story-hook-body { font-size: 14px; } }
