@@ -28,3 +28,4 @@
 - [x] Remove the plus sign from every process step; the minus still shows only on an open step; verified all four steps and no page errors.
 - [x] Delete the "Independent concepts are marked as such" note under the work cards; verified the two cards remain and no page errors.
 - [x] Remove sparkle decoration and edge shadows from all about photos, and decorative borders from story images, preserving image sizes and expansion.
+- [x] Trim the speckled glitter border off all 17 case-study screenshots (12px crop) and republish them; both studies and the expanded view verified clean, no page errors.
