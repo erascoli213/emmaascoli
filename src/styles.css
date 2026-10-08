@@ -406,13 +406,16 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-bullets li::marker { color: var(--rose); }
 .story-highlight { margin: 22px 0 0; padding: 20px 24px; border-left: 3px solid var(--color-primary); border-radius: 0 18px 18px 0; background: color-mix(in oklab, var(--color-primary) 8%, transparent); font-family: "DM Serif Display", serif; font-size: 21px; line-height: 1.35; }
 .story-images { display: grid; gap: 18px; margin-top: 22px; }
-.story-images.two { grid-template-columns: 1fr 1fr; align-items: stretch; }
-.story-images figure { margin: 0; display: flex; flex-direction: column; }
+.story-images.two, .story-images.many { grid-template-columns: 1fr 1fr; }
+.story-images figure { margin: 0; }
 .story-images img { width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid color-mix(in oklab, currentColor 14%, transparent); box-shadow: 0 10px 28px -18px color-mix(in oklab, currentColor 50%, transparent); }
-.story-images.two .study-image-trigger { height: 100%; }
-.story-images.two .study-image-trigger img { height: 100%; object-fit: cover; object-position: top; }
+@media (min-width: 761px) { .story-images.two img { aspect-ratio: var(--pair-aspect, auto); object-fit: cover; object-position: top; } }
 .story-images figcaption { margin-top: 9px; font-family: "Caveat", cursive; font-size: 19px; color: var(--rose); }
-@media (max-width: 760px) { .story-images.two { grid-template-columns: 1fr; } .story-highlight { font-size: 18px; } .case-story { gap: 34px; } }
+.story-inline-row { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 30px; align-items: center; margin-top: 26px; }
+.story-inline-row figcaption { display: none; }
+.story-inline-note { margin: 0; font-size: 16px; line-height: 1.6; position: relative; padding-left: 27px; }
+.story-inline-note::before { content: '✳'; position: absolute; left: 0; top: 1px; color: var(--rose); font-size: 15px; }
+@media (max-width: 760px) { .story-images.two, .story-images.many { grid-template-columns: 1fr; } .story-highlight { font-size: 18px; } .case-story { gap: 34px; } .story-inline-row { grid-template-columns: 1fr; gap: 12px; } }
 
 /* Tactile screenshot expansion, with an accessible nested reader. */
 .study-image-trigger { position: relative; display: block; width: 100%; height: auto; padding: 0; border-radius: 14px; background: transparent; white-space: normal; cursor: zoom-in; transition: transform .4s cubic-bezier(.34,1.56,.64,1); }

@@ -2,10 +2,9 @@ import { useState } from 'react';
 import { Maximize2, ZoomIn, ZoomOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import type { StoryImage } from '@/lib/projects';
 
-type StudyImage = { src: string; alt: string; caption: string };
-
-export function ExpandableStudyImage({ image }: { image: StudyImage }) {
+export function ExpandableStudyImage({ image }: { image: StoryImage }) {
   const [zoomed, setZoomed] = useState(false);
   return (
     <figure>
