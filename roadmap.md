@@ -29,3 +29,4 @@
 - [x] Delete the "Independent concepts are marked as such" note under the work cards; verified the two cards remain and no page errors.
 - [x] Remove sparkle decoration and edge shadows from all about photos, and decorative borders from story images, preserving image sizes and expansion.
 - [x] Trim the speckled glitter border off all 17 case-study screenshots (12px crop) and republish them; both studies and the expanded view verified clean, no page errors.
+- [x] Turn the disable-screenshot note into a bullet point sitting above its image (was beside it); verified the marker and order at 1065, no page errors.
