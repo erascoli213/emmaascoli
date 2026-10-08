@@ -44,8 +44,8 @@ function StoryLearnings({ learnings }: { learnings: string[] }) {
   return (
     <div className="story-learnings">
       <span className="story-learnings-label">what we learned</span>
-      <ul className="story-learnings-list">
-        {learnings.map((l) => <li key={l}><span className="story-learnings-mark" aria-hidden="true">✳</span><span>{l}</span></li>)}
+      <ul className="story-learnings-grid">
+        {learnings.map((l) => <li className="story-learning-card" key={l}><span className="story-learnings-mark" aria-hidden="true">✳</span><p>{l}</p></li>)}
       </ul>
     </div>
   );
