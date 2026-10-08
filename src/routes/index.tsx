@@ -19,7 +19,7 @@ function StoryImages({ images }: { images: StoryImage[] }) {
       {plain.length > 0 && (
         <div
           className={plain.length === 2 ? 'story-images two' : plain.length > 2 ? 'story-images many' : 'story-images'}
-          style={plain.length === 2 ? ({ '--pair-aspect': `${plain[0].w} / ${plain[0].h}` } as CSSProperties) : undefined}
+          style={plain.length === 2 && plain[0] ? ({ '--pair-aspect': `${plain[0].w} / ${plain[0].h}` } as CSSProperties) : undefined}
         >
           {plain.map((im) => <ExpandableStudyImage key={im.src} image={im} />)}
         </div>
@@ -35,7 +35,7 @@ function StoryImages({ images }: { images: StoryImage[] }) {
 }
 
 
-function StoryBullets({ bullets, label }: { bullets: string[]; label?: string }) {
+function StoryBullets({ bullets, label }: { bullets: string[]; label?: string | undefined }) {
   const list = <ul className="story-bullets">{bullets.map((b) => <li key={b}>{b}</li>)}</ul>;
   return label ? <div className="story-methods"><span className="story-methods-label">{label}</span>{list}</div> : list;
 }
