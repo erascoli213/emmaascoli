@@ -53,9 +53,9 @@ function StoryLearnings({ learnings }: { learnings: string[] }) {
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: 'Emma Ascoli — Product Designer' },
+    { title: 'Emma Ascoli · Product Designer' },
     { name: 'description', content: 'A product design portfolio rooted in curiosity, collaboration, and a little playful thinking. Explore Emma Ascoli’s work and process.' },
-    { property: 'og:title', content: 'Emma Ascoli — Product Designer' },
+    { property: 'og:title', content: 'Emma Ascoli · Product Designer' },
     { property: 'og:description', content: 'Thoughtful experiences, playful details. Explore product design work and the process behind it.' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
