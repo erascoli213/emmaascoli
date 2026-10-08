@@ -330,7 +330,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .about-section { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; padding-top: 90px; padding-bottom: 90px; align-items: center; }
 .about-mark { position: relative; width: 100%; max-width: 430px; }
 .about-carousel { width: 100%; max-width: 430px; min-width: 0; transform: rotate(-1.2deg); }
-.about-carousel-frame { position: relative; aspect-ratio: 4 / 5; border-radius: 26px; overflow: hidden; box-shadow: var(--shadow-device); }
+.about-carousel-frame { position: relative; aspect-ratio: 4 / 5; border-radius: 26px; overflow: hidden; }
 .about-carousel-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.06) rotate(1.5deg); transition: opacity .7s ease, transform .9s cubic-bezier(.34, 1.56, .64, 1); pointer-events: none; }
 .about-carousel-frame img.is-active { opacity: 1; transform: scale(1) rotate(0deg); }
 .about-carousel-footer { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 14px; padding-inline: 4px; min-height: 46px; }
@@ -341,7 +341,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .about-carousel-dots button.is-active { background: var(--rose); border-color: var(--rose); transform: scale(1.25); }
 @media (max-width: 760px) { .about-carousel-caption { font-size: 20px; } .about-carousel-footer { min-height: 40px; } }
 @media (prefers-reduced-motion: reduce) { .about-carousel-frame img { transition: none; } }
-.about-star { position: absolute; top: -26px; right: -14px; width: 62px; color: var(--rose); animation: doodle-sway 5s ease-in-out infinite; }
+.about-star { display: none; }
 .about-copy h2 { font-size: 43px; margin: 15px 0 20px; }
 .about-copy p { font-size: 13px; line-height: 1.9; max-width: 420px; margin-bottom: 15px; }
 .handwritten { font-family: 'Caveat', cursive; color: var(--rose); font-size: 23px; display: block; margin-top: 20px; transform: rotate(-3deg); }
@@ -412,7 +412,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-images { display: grid; gap: 18px; margin-top: 22px; }
 .story-images.two, .story-images.many { grid-template-columns: 1fr 1fr; }
 .story-images figure { margin: 0; }
-.story-images img { width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid color-mix(in oklab, currentColor 14%, transparent); box-shadow: 0 10px 28px -18px color-mix(in oklab, currentColor 50%, transparent); }
+.story-images img { width: 100%; height: auto; display: block; border-radius: 14px; }
 @media (min-width: 761px) { .story-images.two img { aspect-ratio: var(--pair-aspect, auto); object-fit: cover; object-position: top; } }
 .story-images figcaption { margin-top: 9px; font-family: "Caveat", cursive; font-size: 19px; color: var(--rose); }
 .story-inline-row { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 30px; align-items: center; margin-top: 26px; }
