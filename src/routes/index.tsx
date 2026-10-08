@@ -7,6 +7,8 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/compone
 import { StarDoodle, LoopDoodle, ProjectArt } from '@/components/portfolio-art';
 import emmaPortrait from '@/assets/emma-portrait.png.asset.json';
 import { projects } from '@/lib/projects';
+import { ExpandableStudyImage } from '@/components/expandable-study-image';
+import type { StoryImage } from '@/lib/projects';
 import logoAsset from '@/assets/pink-simple-logo.png.asset.json';
 
 function StoryImages({ images }: { images: StoryImage[] }) {
@@ -31,9 +33,6 @@ function StoryImages({ images }: { images: StoryImage[] }) {
     </>
   );
 }
-import type { StoryImage } from '@/lib/projects';
-import logoAsset from '@/assets/pink-simple-logo.png.asset.json';
-import logoAsset from '@/assets/pink-simple-logo.png.asset.json';
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
