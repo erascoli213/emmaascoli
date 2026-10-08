@@ -8,7 +8,7 @@ const PHOTOS = [
   { url: emmaPortrait.url, alt: 'Emma Ascoli outdoors at Bryce Canyon', caption: 'bryce canyon national park' },
   { url: dog.url, alt: 'Winston, a golden retriever, sitting in front of blue hydrangeas', caption: 'winny pup (who acts like one)' },
   { url: pilates.url, alt: 'A reformer pilates studio', caption: 'my second home 🫶' },
-  { url: celtics.url, alt: 'A Celtics game at TD Garden', caption: 'Go Celtics!' },
+  { url: celtics.url, alt: 'A Celtics game at TD Garden', caption: 'go Celtics!' },
 ] as const;
 
 const INTERVAL_MS = 4200;
