@@ -70,25 +70,36 @@ function StoryConcepts({ concepts }: { concepts: StoryConcept[] }) {
 }
 
 export const Route = createFileRoute("/")({
-  head: () => ({ meta: [
-    { title: 'Emma Ascoli · Product Designer' },
-    { name: 'description', content: 'A product design portfolio rooted in curiosity, collaboration, and a little playful thinking. Explore Emma Ascoli’s work and process.' },
-    { property: 'og:title', content: 'Emma Ascoli · Product Designer' },
-    { property: 'og:description', content: 'Thoughtful experiences, playful details. Explore product design work and the process behind it.' },
-    { property: 'og:type', content: 'website' },
-    { name: 'twitter:card', content: 'summary_large_image' },
-  ] }),
+  validateSearch: (search: Record<string, unknown>): { project?: string } =>
+    typeof search['project'] === 'string' ? { project: search['project'] } : {},
+  head: ({ match }) => {
+    const p = projects.find((x) => x.slug === match.search.project);
+    const title = p ? `${p.name} · Emma Ascoli case study` : 'Emma Ascoli · Product Designer';
+    const description = p ? p.description : 'A product design portfolio rooted in curiosity, collaboration, and a little playful thinking. Explore Emma Ascoli’s work and process.';
+    return { meta: [
+      { title },
+      { name: 'description', content: description },
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: p ? p.description : 'Thoughtful experiences, playful details. Explore product design work and the process behind it.' },
+      { property: 'og:type', content: p ? 'article' : 'website' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+    ] };
+  },
   component: Index,
 });
 
 function Index() {
-  const [selected, setSelected] = useState<typeof projects[number] | null>(null);
+  const { project: projectSlug } = Route.useSearch();
+  const navigate = Route.useNavigate();
+  const selected = projects.find((p) => p.slug === projectSlug) ?? null;
+  const setSelected = (p: typeof projects[number] | null) =>
+    navigate({ search: p ? { project: p.slug } : {}, resetScroll: false, replace: !p });
   const [openProcess, setOpenProcess] = useState<number | null>(null);
   const process = [
-    { name: 'Get curious', note: 'Listen first. Ask better questions.', detail: 'Start with the people, not the pixels. Understand their needs, the context, and the problem worth solving through conversations and discovery.' },
-    { name: 'Connect the dots', note: 'Make sense of the messy middle.', detail: 'Bring observations together, frame the opportunity, and map the journey. Align on a clear direction before exploring solutions.' },
-    { name: 'Make it tangible', note: 'Explore, sketch, and bring it to life.', detail: 'Turn ideas into flows, wireframes, and interactive prototypes. Collaborate early, explore alternatives, and make the details feel intentional.' },
-    { name: 'Learn & refine', note: 'Test the little things. Keep growing.', detail: 'Put the experience in people’s hands, listen to what works and what doesn’t, and refine it. Good design leaves room to keep learning.' },
+    { name: 'Learn the system', note: 'Understand the tech before the screens.', detail: 'Get fluent in the protocols, APIs, and constraints behind the experience, like SCIM, SSO, and infrastructure graphs, so I can ask engineers sharper questions and spot edge cases early.' },
+    { name: 'Talk to the admins', note: 'Real customers, early and often.', detail: 'Interview the security and platform engineers who live with the problem, study the tools they already trust, and keep a feedback loop open with early adopters throughout.' },
+    { name: 'Design with engineering', note: 'Engineers are my closest partners.', detail: 'Sketch flows alongside back-end and front-end engineers, pressure-test ideas against real constraints, and jump in wherever the team needs me to keep things moving.' },
+    { name: 'Design for day 2', note: 'Trust at scale, long after setup.', detail: 'Go beyond the happy path: system status, failure states, safe ways to undo, and clear documentation, so people can rely on the product once thousands of things are running.' },
   ];
   return (
     <div className="portfolio">
