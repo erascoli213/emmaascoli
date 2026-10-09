@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
-import emmaPortrait from '@/assets/emma-portrait.png.asset.json';
-import celtics from '@/assets/about/celtics.png.asset.json';
-import pilates from '@/assets/about/pilates.png.asset.json';
-import dog from '@/assets/about/dog.png.asset.json';
+import hike from '@/assets/about/about-hike.jpg.asset.json';
+import winny from '@/assets/about/about-winny.jpg.asset.json';
+import fenway from '@/assets/about/about-fenway.jpg.asset.json';
 
 const PHOTOS = [
-  { url: emmaPortrait.url, alt: 'Emma Ascoli outdoors at Bryce Canyon', caption: 'bryce canyon national park' },
-  { url: dog.url, alt: 'Winston, a golden retriever, sitting in front of blue hydrangeas', caption: 'winny pup (who acts like one)' },
-  { url: pilates.url, alt: 'A reformer pilates studio', caption: 'my second home 🫶' },
-  { url: celtics.url, alt: 'A Celtics game at TD Garden', caption: 'go Celtics!' },
+  { url: hike.url, alt: 'Emma Ascoli seen from behind in a red rock tunnel at Bryce Canyon, arms raised toward the view', caption: 'bryce canyon national park' },
+  { url: winny.url, alt: 'Winston, a golden retriever in a red harness, sitting on a sofa outside a townhome', caption: 'winny pup (who acts like one)' },
+  { url: fenway.url, alt: 'A baseball game at Fenway Park at dusk, with the field, crowd and Boston skyline', caption: 'fenway never gets old' },
 ] as const;
 
 const INTERVAL_MS = 4200;
