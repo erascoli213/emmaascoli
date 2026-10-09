@@ -71,7 +71,7 @@ function StoryConcepts({ concepts }: { concepts: StoryConcept[] }) {
 
 export const Route = createFileRoute("/")({
   validateSearch: (search: Record<string, unknown>): { project?: string } =>
-    typeof search.project === 'string' ? { project: search.project } : {},
+    typeof search['project'] === 'string' ? { project: search['project'] } : {},
   head: ({ match }) => {
     const p = projects.find((x) => x.slug === match.search.project);
     const title = p ? `${p.name} · Emma Ascoli case study` : 'Emma Ascoli · Product Designer';
