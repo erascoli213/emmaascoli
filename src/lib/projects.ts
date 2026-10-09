@@ -24,7 +24,7 @@ export type StoryHook = { line: string; body: string[]; glance: { label: string;
 const accessHook: StoryHook = {
   line: 'Our biggest customers wanted to bring thousands of people into HCP, and we were asking them to do it by hand.',
   body: [
-    'HCP was starting to land enterprise deals, but identity management didn’t scale. Security and platform teams already managed their people in tools like Okta and Azure, and they expected HCP to stay in sync automatically. Without that, onboarding stalled.',
+    'HashiCorp Cloud Platform (HCP) was starting to land enterprise deals, but identity management didn’t scale. Security and platform teams already managed their people in tools like Okta and Azure, and they expected HCP to stay in sync automatically. Without that, onboarding stalled.',
     'I designed SCIM provisioning for HCP, from the first setup step to the moment an admin can look at 5,000 synced users and trust what they see.',
   ],
   glance: [
