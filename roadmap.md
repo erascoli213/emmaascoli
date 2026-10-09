@@ -37,3 +37,4 @@
 - 2026-10-08: Round 2 of both studies now shows each concept in its own card (soft rose, rounded, ✳ + plum title) with its screenshots inside; verified 2 cards per study, lightbox works from inside cards, stacks on phone.
 
 - [x] Remove the identity study's hook line ("Our biggest customers...") from accessHook in src/lib/projects.ts; made StoryHook.line optional and guarded the render in src/routes/index.tsx so no empty paragraph remains. Query-catalog hook line unchanged.
+- [x] Add a "TL;DR" sub-title above the identity study's opening paragraphs (eyebrow-styled, like the other section labels); made StoryHook.label optional and rendered it in src/routes/index.tsx. Query study unchanged.
