@@ -19,9 +19,10 @@ import qcSave from '@/assets/qc-exports/qc-save-dialog.png.asset.json';
 export type StoryImage = { src: string; alt: string; caption: string; w: number; h: number; note?: string };
 export type StoryConcept = { title: string; images: StoryImage[] };
 export type StorySection = { eyebrow: string; heading: string; body?: string[]; bullets?: string[]; learnings?: string[]; images?: StoryImage[]; concepts?: StoryConcept[]; highlight?: string };
-export type StoryHook = { line?: string; body: string[]; glance: { label: string; value: string }[]; image: StoryImage };
+export type StoryHook = { line?: string; label?: string; body: string[]; glance: { label: string; value: string }[]; image: StoryImage };
 
 const accessHook: StoryHook = {
+  label: 'TL;DR',
   body: [
     'HashiCorp Cloud Platform (HCP) was starting to land enterprise deals, but identity management didn’t scale. Security and platform teams already managed their people in tools like Okta and Azure, and they expected HCP to stay in sync automatically. Without that, onboarding stalled.',
     'I designed SCIM provisioning for HCP, from the first setup step to the moment an admin can look at 5,000 synced users and trust what they see.',
