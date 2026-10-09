@@ -38,3 +38,4 @@
 
 - [x] Remove the identity study's hook line ("Our biggest customers...") from accessHook in src/lib/projects.ts; made StoryHook.line optional and guarded the render in src/routes/index.tsx so no empty paragraph remains. Query-catalog hook line unchanged.
 - [x] Add a "TL;DR" sub-title above the identity study's opening paragraphs (eyebrow-styled, like the other section labels); made StoryHook.label optional and rendered it in src/routes/index.tsx. Query study unchanged.
+- [x] Remove the study subtitle line (DialogDescription "Secure, automated identity provisioning for HashiCorp Cloud Platform.") from the case-study dialog, and remove the "TL;DR" label above the identity study opening.
