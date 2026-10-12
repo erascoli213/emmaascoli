@@ -2,10 +2,11 @@
   "version": 1,
   "asset_id": "e3e98034-c49b-4def-b759-6b3e3e574f62",
   "project_id": "e7b225f6-24d0-4d77-808c-44d099a81bb9",
-  "url": "/__l5e/assets-v1/e3e98034-c49b-4def-b759-6b3e3e574f62/qc-builder-catalog.jpg",
+  "url": "images/qc-fixed/qc-builder-catalog.jpg",
   "r2_key": "a/v1/e7b225f6-24d0-4d77-808c-44d099a81bb9/e3e98034-c49b-4def-b759-6b3e3e574f62/qc-builder-catalog.jpg",
   "original_filename": "qc-builder-catalog.jpg",
   "size": 46976,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-08T13:38:26Z"
+  "created_at": "2026-10-08T13:38:26Z",
+  "lovable_url": "https://emmaascoli.design/__l5e/assets-v1/e3e98034-c49b-4def-b759-6b3e3e574f62/qc-builder-catalog.jpg"
 }

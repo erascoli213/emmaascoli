@@ -2,10 +2,11 @@
   "version": 1,
   "asset_id": "7ef45f4a-c0d3-456f-9b74-b44394fdf265",
   "project_id": "e7b225f6-24d0-4d77-808c-44d099a81bb9",
-  "url": "/__l5e/assets-v1/7ef45f4a-c0d3-456f-9b74-b44394fdf265/scim-guide.png",
+  "url": "images/scim-exports/scim-guide.png",
   "r2_key": "a/v1/e7b225f6-24d0-4d77-808c-44d099a81bb9/7ef45f4a-c0d3-456f-9b74-b44394fdf265/scim-guide.png",
   "original_filename": "scim-guide.png",
   "size": 296151,
   "content_type": "image/png",
-  "created_at": "2026-10-08T20:40:50Z"
+  "created_at": "2026-10-08T20:40:50Z",
+  "lovable_url": "https://emmaascoli.design/__l5e/assets-v1/7ef45f4a-c0d3-456f-9b74-b44394fdf265/scim-guide.png"
 }

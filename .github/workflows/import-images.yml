@@ -1,0 +1,24 @@
+# Run this once (Actions tab → "Import images from Lovable" → Run workflow)
+# while emmaascoli.design is still served by Lovable. It saves every image
+# into the repository so the site no longer depends on Lovable.
+name: Import images from Lovable
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/import-lovable-images.mjs
+      - name: Commit images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add public
+          git diff --cached --quiet && echo "Nothing new to commit" && exit 0
+          git commit -m "Import site images from Lovable"
+          git push

@@ -1,5 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { CSSProperties } from 'react';
 import { ArrowDown, ArrowUpRight, ArrowRight, Heart, Minus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -69,31 +68,36 @@ function StoryConcepts({ concepts }: { concepts: StoryConcept[] }) {
   );
 }
 
-export const Route = createFileRoute("/")({
-  validateSearch: (search: Record<string, unknown>): { project?: string } =>
-    typeof search['project'] === 'string' ? { project: search['project'] } : {},
-  head: ({ match }) => {
-    const p = projects.find((x) => x.slug === match.search.project);
-    const title = p ? `${p.name} · Emma Ascoli case study` : 'Emma Ascoli · Product Designer';
-    const description = p ? p.description : 'A product design portfolio rooted in curiosity, collaboration, and a little playful thinking. Explore Emma Ascoli’s work and process.';
-    return { meta: [
-      { title },
-      { name: 'description', content: description },
-      { property: 'og:title', content: title },
-      { property: 'og:description', content: p ? p.description : 'Thoughtful experiences, playful details. Explore product design work and the process behind it.' },
-      { property: 'og:type', content: p ? 'article' : 'website' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-    ] };
-  },
-  component: Index,
-});
+const DEFAULT_TITLE = 'Emma Ascoli · Product Designer';
 
-function Index() {
-  const { project: projectSlug } = Route.useSearch();
-  const navigate = Route.useNavigate();
+function readProjectParam(): string | undefined {
+  const p = new URLSearchParams(window.location.search).get('project');
+  return p ?? undefined;
+}
+
+function useProjectParam(): [string | undefined, (slug: string | null) => void] {
+  const [slug, setSlug] = useState<string | undefined>(() => readProjectParam());
+  useEffect(() => {
+    const onPop = () => setSlug(readProjectParam());
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+  const update = (next: string | null) => {
+    const url = new URL(window.location.href);
+    if (next) url.searchParams.set('project', next); else url.searchParams.delete('project');
+    if (next) window.history.pushState(null, '', url); else window.history.replaceState(null, '', url);
+    setSlug(next ?? undefined);
+  };
+  return [slug, update];
+}
+
+export function Index() {
+  const [projectSlug, setProjectSlug] = useProjectParam();
   const selected = projects.find((p) => p.slug === projectSlug) ?? null;
-  const setSelected = (p: typeof projects[number] | null) =>
-    navigate({ search: p ? { project: p.slug } : {}, resetScroll: false, replace: !p });
+  const setSelected = (p: typeof projects[number] | null) => setProjectSlug(p ? p.slug : null);
+  useEffect(() => {
+    document.title = selected ? `${selected.name} · Emma Ascoli case study` : DEFAULT_TITLE;
+  }, [selected]);
   const [openProcess, setOpenProcess] = useState<number | null>(null);
   const process = [
     { name: 'Learn the system', note: 'Understand the tech before the screens.', detail: 'Get fluent in the protocols, APIs, and constraints behind the experience, like SCIM, SSO, and infrastructure graphs, so I can ask engineers sharper questions and spot edge cases early.' },

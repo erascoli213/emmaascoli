@@ -2,10 +2,11 @@
   "version": 1,
   "asset_id": "6cb780c4-e7b0-45ea-97d2-36a21809697a",
   "project_id": "e7b225f6-24d0-4d77-808c-44d099a81bb9",
-  "url": "/__l5e/assets-v1/6cb780c4-e7b0-45ea-97d2-36a21809697a/pink-simple-logo.png",
+  "url": "images/pink-simple-logo.png",
   "r2_key": "a/v1/e7b225f6-24d0-4d77-808c-44d099a81bb9/6cb780c4-e7b0-45ea-97d2-36a21809697a/pink-simple-logo.png",
   "original_filename": "pink-simple-logo.png",
   "size": 132407,
   "content_type": "image/png",
-  "created_at": "2026-10-07T19:41:44Z"
+  "created_at": "2026-10-07T19:41:44Z",
+  "lovable_url": "https://emmaascoli.design/__l5e/assets-v1/6cb780c4-e7b0-45ea-97d2-36a21809697a/pink-simple-logo.png"
 }
