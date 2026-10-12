@@ -41,3 +41,4 @@
 - [x] Remove the study subtitle line (DialogDescription "Secure, automated identity provisioning for HashiCorp Cloud Platform.") from the case-study dialog, and remove the "TL;DR" label above the identity study opening.
 - [x] Swapped the three "More about me" photos for the newly uploaded ones (Bryce Canyon hike, Winston, Fenway) at the same frame size/shape; old photos (portrait, pilates, Celtics) no longer shown, their pointers kept.
 - [x] Remove the query-catalog hook line ("Customers could ask Infragraph great questions...") from queryHook in src/lib/projects.ts; render guard already skips it.
+- [x] Remove the two Grafana competitive-analysis screenshots from the query-catalog Discovery section; dropped their now-unused imports. Asset pointers kept on disk.
