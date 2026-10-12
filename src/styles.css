@@ -338,7 +338,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .about-carousel-dots button { width: 12px; height: 12px; border-radius: 999px; border: 1.5px solid var(--plum); background: transparent; padding: 0; cursor: pointer; transition: transform .35s cubic-bezier(.34, 1.56, .64, 1), background .25s ease; }
 .about-carousel-dots button:hover { transform: scale(1.35); }
 .about-carousel-dots button.is-active { background: var(--rose); border-color: var(--rose); transform: scale(1.25); }
-@media (max-width: 760px) { .about-carousel-caption { font-size: 20px; } .about-carousel-footer { min-height: 40px; } }
+@media (max-width: 760px) { .about-carousel-footer { margin-top: 13px; } }
 @media (prefers-reduced-motion: reduce) { .about-carousel-frame img { transition: none; } }
 .about-star { display: none; }
 .about-copy h2 { font-size: 43px; margin: 15px 0 20px; }
