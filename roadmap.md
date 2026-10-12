@@ -43,3 +43,4 @@
 - [x] Remove the query-catalog hook line ("Customers could ask Infragraph great questions...") from queryHook in src/lib/projects.ts; render guard already skips it.
 - [x] Remove the two Grafana competitive-analysis screenshots from the query-catalog Discovery section; dropped their now-unused imports. Asset pointers kept on disk.
 - [x] Remove the handwritten captions under the three "More about me" photos (caption span + its CSS deleted, dots kept and centred, photo labels retained for screen readers); verified 0 caption elements, all three photos still rotate, no page errors, at 1280 and 390.
+- [x] Switch the Users screen's page-header icon tile to Helios's small variant (28px tile, 16px official Flight user icon, 5px radius) replacing the 40px medium tile; republished under the same asset id and verified clean in the live identity study, no page errors.
