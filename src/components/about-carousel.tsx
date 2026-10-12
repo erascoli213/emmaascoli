@@ -4,9 +4,9 @@ import winny from '@/assets/about/about-winny.jpg.asset.json';
 import fenway from '@/assets/about/about-fenway.jpg.asset.json';
 
 const PHOTOS = [
-  { url: hike.url, alt: 'Emma Ascoli seen from behind in a red rock tunnel at Bryce Canyon, arms raised toward the view', caption: 'bryce canyon national park' },
-  { url: winny.url, alt: 'Winston, a golden retriever in a red harness, sitting on a sofa outside a townhome', caption: 'winny pup (who acts like one)' },
-  { url: fenway.url, alt: 'A baseball game at Fenway Park at dusk, with the field, crowd and Boston skyline', caption: 'fenway never gets old' },
+  { url: hike.url, alt: 'Emma Ascoli seen from behind in a red rock tunnel at Bryce Canyon, arms raised toward the view', label: 'Bryce Canyon hike' },
+  { url: winny.url, alt: 'Winston, a golden retriever in a red harness, sitting on a sofa outside a townhome', label: 'Winston the golden retriever' },
+  { url: fenway.url, alt: 'A baseball game at Fenway Park at dusk, with the field, crowd and Boston skyline', label: 'Fenway Park at dusk' },
 ] as const;
 
 const INTERVAL_MS = 4200;
@@ -46,9 +46,6 @@ export function AboutCarousel() {
         ))}
       </div>
       <div className="about-carousel-footer">
-        <span className="about-carousel-caption" aria-live="polite">
-          {PHOTOS[index]?.caption}
-        </span>
         <div className="about-carousel-dots" role="tablist" aria-label="About photos">
           {PHOTOS.map((photo, i) => (
             <button
@@ -56,7 +53,7 @@ export function AboutCarousel() {
               type="button"
               role="tab"
               aria-selected={i === index}
-              aria-label={`Show photo: ${photo.caption}`}
+              aria-label={`Show photo: ${photo.label}`}
               className={i === index ? 'is-active' : ''}
               onClick={() => setIndex(i)}
             />
