@@ -42,3 +42,4 @@
 - [x] Swapped the three "More about me" photos for the newly uploaded ones (Bryce Canyon hike, Winston, Fenway) at the same frame size/shape; old photos (portrait, pilates, Celtics) no longer shown, their pointers kept.
 - [x] Remove the query-catalog hook line ("Customers could ask Infragraph great questions...") from queryHook in src/lib/projects.ts; render guard already skips it.
 - [x] Remove the two Grafana competitive-analysis screenshots from the query-catalog Discovery section; dropped their now-unused imports. Asset pointers kept on disk.
+- [x] Remove the handwritten captions under the three "More about me" photos (caption span + its CSS deleted, dots kept and centred, photo labels retained for screen readers); verified 0 caption elements, all three photos still rotate, no page errors, at 1280 and 390.
