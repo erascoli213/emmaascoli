@@ -25,11 +25,11 @@ const accessHook: StoryHook = {
     'I designed SCIM provisioning for HCP, from the first setup step to the moment an admin can look at 5,000 synced users and trust what they see.',
   ],
   glance: [
-    { label: 'My role', value: 'Sole product designer, end to end' },
-    { label: 'Team', value: '1 PM, 6 to 7 back-end engineers, 1 front-end engineer' },
-    { label: 'Outcome', value: '5+ of our largest customers onboarded to the beta' },
+    { label: 'My role', value: 'Lead designer on the project' },
+    { label: 'Team', value: '1 Product manager, 7 BE Engineers, 1 FE Engineer' },
+    { label: 'Outcome', value: '5+ of our largest customers onboarded to our beta' },
   ],
-  image: { src: scimUsers.url, alt: 'HCP users table showing SCIM sync status for every user', caption: 'Where it ended up: every synced user, with a status you can trust', w: 881, h: 667 },
+  image: { src: scimUsers.url, alt: 'HCP users table showing SCIM sync status for every user', caption: 'Every synced user, with a status you can trust', w: 881, h: 667 },
 };
 
 const accessStory: StorySection[] = [
