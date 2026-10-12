@@ -48,7 +48,6 @@ const accessStory: StorySection[] = [
 ];
 
 const queryHook: StoryHook = {
-  line: 'Customers could ask Infragraph great questions about their infrastructure, but the answers disappeared.',
   body: [
     'Infragraph lets teams query their entire infrastructure estate. But every insight was one-off: you couldn’t save a question, share it with a teammate, or come back next week to see if things had improved. That capped how much long-term value the product could deliver.',
     'I led the design of the query catalog, the system that turns one-off questions into shared, persistent insights teams can revisit over time.',
