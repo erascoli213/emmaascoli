@@ -5,7 +5,7 @@ import scimDisableInitial from '@/assets/scim-exports/scim-disable-initial.png.a
 import scimSso from '@/assets/scim-exports/scim-sso.png.asset.json';
 import scimToken from '@/assets/scim-exports/scim-token.png.asset.json';
 import scimDisable from '@/assets/scim-exports/scim-disable.png.asset.json';
-import scimUsers from '@/assets/scim-exports/scim-users.png.asset.json';
+import scimUsers from '@/assets/scim-exports/scim-users-helios.png.asset.json';
 import scimGuide from '@/assets/scim-exports/scim-guide.png.asset.json';
 import qcOverview from '@/assets/qc-exports/qc-infragraph-overview.png.asset.json';
 import qcBuilder from '@/assets/qc-exports/qc-infragraph-builder.png.asset.json';
