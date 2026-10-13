@@ -50,7 +50,7 @@ const queryHook: StoryHook = {
     { label: 'My role', value: 'Product designer leading the query catalog' },
     { label: 'Team', value: '3 designers, 1 PM, 20+ back-end, 3 front-end engineers' },
     { label: 'Outcome', value: 'Saved, shared queries that grow product value beyond a single session' },
-    { label: 'Today', value: 'Live in HCP, with saved queries in the catalog', href: 'https://developer.hashicorp.com/hcp/docs/infragraph/view/explorer#save-queries' },
+    { label: 'Today', value: 'Live in HCP, view Infragraph docs to learn more', href: 'https://developer.hashicorp.com/hcp/docs/infragraph/view/explorer#save-queries' },
   ],
   image: { src: qcBuilderCatalog.url, alt: 'Query builder connected to the query catalog', caption: 'Where it ended up: the builder and catalog working as one', w: 2880, h: 1920, video: 'videos/qc-builder-catalog.mp4', poster: 'images/qc-exports/qc-flow-start.png' },
 };
