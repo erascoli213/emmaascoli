@@ -476,3 +476,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-hook-image { margin-top: 6px; }
 .story-hook-image video { display: block; width: 100%; height: auto; border-radius: 14px; }
 @media (max-width: 760px) { .story-glance { grid-template-columns: 1fr; } .story-hook-body { font-size: 14px; } }
+
+.story-link { color: var(--plum); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; display: inline-flex; align-items: center; gap: 3px; }
+.story-link:hover { color: var(--rose); }
+.story-link svg { flex-shrink: 0; }

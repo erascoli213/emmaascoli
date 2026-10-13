@@ -13,8 +13,8 @@ import qcSave from '@/assets/qc-exports/qc-save-dialog.png.asset.json';
 
 export type StoryImage = { src: string; alt: string; caption: string; w: number; h: number; note?: string; narrow?: boolean; video?: string; poster?: string };
 export type StoryConcept = { title: string; images: StoryImage[] };
-export type StorySection = { eyebrow: string; heading: string; body?: string[]; bullets?: string[]; learnings?: string[]; images?: StoryImage[]; stackImages?: boolean; concepts?: StoryConcept[]; highlight?: string };
-export type StoryHook = { line?: string; label?: string; body: string[]; glance: { label: string; value: string }[]; image: StoryImage };
+export type StorySection = { eyebrow: string; heading: string; link?: { label: string; href: string }; body?: string[]; bullets?: string[]; learnings?: string[]; images?: StoryImage[]; stackImages?: boolean; concepts?: StoryConcept[]; highlight?: string };
+export type StoryHook = { line?: string; label?: string; body: string[]; glance: { label: string; value: string; href?: string }[]; image: StoryImage };
 
 const accessHook: StoryHook = {
   body: [
@@ -25,6 +25,7 @@ const accessHook: StoryHook = {
     { label: 'My role', value: 'Lead designer on the project' },
     { label: 'Team', value: '1 Product manager, 7 BE Engineers, 1 FE Engineer' },
     { label: 'Outcome', value: '5+ of our largest customers onboarded to our beta' },
+    { label: 'Today', value: 'Out of beta and available to all HCP customers', href: 'https://developer.hashicorp.com/hcp/docs/hcp/iam/scim' },
   ],
   image: { src: scimUsers.url, alt: 'HCP users table showing SCIM sync status for every user', caption: 'Every synced user, with a status you can trust', w: 2880, h: 1920, video: 'videos/scim-users-hover.mp4', poster: 'images/scim-exports/scim-users-clean.png' },
 };
@@ -38,7 +39,7 @@ const accessStory: StorySection[] = [
   { eyebrow: 'The twist', heading: 'Setup was solved, trust wasn’t', body: ['Round 1 got admins through setup, but feedback exposed a bigger gap: once SCIM was on, they had no way to see what the system was doing. With 5,000 users and 500 groups syncing, “did it work?” is the question that matters most.', 'Admins didn’t just need to enable SCIM efficiently; they needed to trust that our system would handle it properly.'], highlight: 'After rounds of internal feedback with PMs, engineers and other designers, we concluded our next phase should focus on scalability post SCIM configuration.' },
   { eyebrow: 'Ideation - Round 2', heading: 'Designing for trust after enablement', body: ['I made provisioning status visible everywhere admins already look, on every user and group, with a defined set of states so nothing is ambiguous. And because customers turn SCIM off to troubleshoot, disabling it had to be safe and explain exactly what would happen before anyone clicked.'], concepts: [{ title: 'Clear system status + sync visibility for users and groups', images: [{ src: scimStatusReference.url, alt: 'SCIM provisioning column reference with user and group status definitions', caption: 'User and group provisioning states', w: 920, h: 2282, narrow: true }] }, { title: 'After: disabling is non-destructive and says exactly what happens to your users, so admins can troubleshoot without fear.', images: [{ src: scimDisable.url, alt: 'Disable SCIM provisioning confirmation dialog explaining what will happen', caption: 'Safe, well-explained disablement behavior', w: 2880, h: 1920 }] }] },
   { eyebrow: 'Beyond the UI', heading: 'This wasn’t just about a functioning UI…', body: ['For a feature this technical, trust also comes from knowing what to expect. Customers needed clear documentation on the results and impact of enabling SCIM to have a seamless beta onboarding.', 'Alongside my product manager, I led the work with our education team to create a thorough SCIM Provisioning User Guide.'], images: [{ src: scimGuide.url, alt: 'SCIM Provisioning User Guide document', caption: 'The SCIM Provisioning User Guide. For confidentiality reasons, this is a shortened version.', w: 1792, h: 2176 }] },
-  { eyebrow: 'Impact', heading: 'What it meant for our customers', body: ['SCIM turned identity from a blocker into something enterprise admins could set up once and rely on.'], bullets: ['Removed a key enterprise adoption blocker', 'Enabled 5+ of our largest customers to onboard to the beta', 'Unlocked millions in retained and expanded revenue'] },
+  { eyebrow: 'Impact', heading: 'What it meant for our customers', body: ['SCIM turned identity from a blocker into something enterprise admins could set up once and rely on.', 'After I left HashiCorp, SCIM provisioning moved out of beta and is now available to all HCP customers, with support expanding beyond Okta and Microsoft Entra ID to Ping ID and IBM Verify.'], link: { label: 'See SCIM provisioning in the HCP docs', href: 'https://developer.hashicorp.com/hcp/docs/hcp/iam/scim' }, bullets: ['Removed a key enterprise adoption blocker', 'Enabled 5+ of our largest customers to onboard to the beta', 'Unlocked millions in retained and expanded revenue'] },
   { eyebrow: 'Reflection', heading: 'What I’m taking with me', bullets: ['Trust matters more than anything in a system at scale', 'This is highly technical: your engineers are your friends! Talk to them early and often', 'Your typical dev team is evolving! Be willing to jump in when needed'] },
 ];
 
