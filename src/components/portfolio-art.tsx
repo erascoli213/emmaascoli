@@ -9,34 +9,11 @@ export function LoopDoodle({ className = '' }: { className?: string }) {
 }
 
 export function ProjectArt({ theme }: { theme: string }) {
-  if (theme === 'access') return <div className="project-art access-art" aria-label="Concept mock of HCP single sign-on details with the SCIM provisioning entry point">
+  if (theme === 'access') return <div className="project-art access-art" aria-label="HCP users table showing SCIM sync status for every user">
     <span className="art-brand">identity provisioning&nbsp;{'\n'}✳</span>
     <div className="browser-mock">
-      <div className="browser-bar"><span>● ● ●</span><small>identity / organization / sso</small><ArrowUpRight size={12}/></div>
-      <div className="scim-shell">
-        <div className="scim-side">
-          <span>‹ Back to dashboard</span>
-          <strong>Organization settings</strong>
-          <span>Organization</span>
-          <span className="scim-active">SSO</span>
-          <span>SCIM provisioning <em>beta</em></span>
-        </div>
-        <div className="scim-main">
-          <div className="scim-title"><h4>Single sign-on details</h4><span className="mock-nav-button">Manage</span></div>
-          <div className="scim-rows">
-            <div><span>Status</span><b className="scim-ok">✓ Enabled</b></div>
-            <div><span>Identity protocol</span><b>SAML</b></div>
-            <div><span>Creation date</span><b>Feb 20, 2025</b></div>
-            <div><span>Owner</span><b>weidner.com</b></div>
-            <div><span>Default organization role</span><b>Admin</b></div>
-          </div>
-          <div className="scim-card">
-            <strong>SCIM provisioning within your SSO-enabled organization</strong>
-            <span>Connect your identity provider, and access arrives exactly as expected.</span>
-            <a>Enable SCIM provisioning <b>→</b></a>
-          </div>
-        </div>
-      </div>
+      <div className="browser-bar"><span>● ● ●</span><small>identity / access control / users</small><ArrowUpRight size={12}/></div>
+      <img className="browser-shot" src="images/scim-exports/scim-users-clean.png" alt="" loading="lazy" />
     </div>
     <span className="art-caption">access that sets itself up</span>
   </div>;
