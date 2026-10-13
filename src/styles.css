@@ -471,5 +471,5 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-glance dt { font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--rose); font-weight: 600; }
 .story-glance dd { margin: 6px 0 0; font-size: 14px; line-height: 1.45; }
 .story-hook-image { margin-top: 6px; }
-.story-hook-image video { display: block; width: 100%; height: auto; }
+.story-hook-image video { display: block; width: 100%; height: auto; border-radius: 14px; }
 @media (max-width: 760px) { .story-glance { grid-template-columns: 1fr; } .story-hook-body { font-size: 14px; } }
