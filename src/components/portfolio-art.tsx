@@ -24,33 +24,11 @@ export function ProjectArt({ theme }: { theme: string }) {
     <div className="phone phone-front"><div className="phone-camera"/><div className="phone-top"><span>Good morning, Alex</span><span>☀</span></div><h4>Let’s grow<br/>something good.</h4><div className="plant-hero"><Leaf/></div><div className="care-panel"><span>A little love for your Monstera</span><strong>Time for a drink 💧</strong><div className="mock-action">Mark as watered <span>✓</span></div></div><div className="phone-nav"><Leaf size={15}/><Heart size={15}/><span>◌</span></div></div>
     <span className="art-caption">a happier kind of plant care</span>
   </div>;
-  return <div className="project-art common-art" aria-label="Illustrated Infragraph query catalog screen">
+  return <div className="project-art common-art" aria-label="Infragraph query catalog with saved queries">
     <span className="art-brand">query catalog{'\n'}✳</span>
     <div className="browser-mock">
       <div className="browser-bar"><span>● ● ●</span><small>infragraph / query catalog</small><ArrowUpRight size={12}/></div>
-      <div className="scim-shell">
-        <div className="scim-side">
-          <strong>Infragraph</strong>
-          <span>Overview</span>
-          <span>Query builder</span>
-          <span className="scim-active">Query catalog</span>
-          <span>Inventory</span>
-        </div>
-        <div className="scim-main">
-          <div className="scim-title"><h4>Query catalog</h4><span className="mock-nav-button">+ New query</span></div>
-          <div className="scim-rows">
-            <div><span>Resources without an owner</span><b className="scim-ok">Security</b></div>
-            <div><span>Outdated AMIs in production</span><b>Health</b></div>
-            <div><span>Not provisioned by Terraform</span><b>Compliance</b></div>
-            <div><span>Untagged S3 buckets</span><b>Security</b></div>
-          </div>
-          <div className="scim-card">
-            <strong>Save it once. Check in anytime.</strong>
-            <span>Share questions with your team and track health over time.</span>
-            <a>Open in query builder <b>→</b></a>
-          </div>
-        </div>
-      </div>
+      <img className="browser-shot" src="images/qc-exports/qc-query-catalog.png" alt="" loading="lazy" />
     </div>
     <span className="art-caption">questions worth keeping</span>
   </div>;

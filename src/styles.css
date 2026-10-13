@@ -250,8 +250,8 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .scim-card span { display: block; font-size: 4.5px; margin-top: 3px; color: color-mix(in oklab, var(--plum) 75%, transparent); }
 .scim-card a { display: block; margin-top: 4px; font-size: 5px; font-weight: 500; color: var(--rose); }
 .access-art .browser-mock { top: 70px; height: 236px; }
-.access-art .browser-mock { display: flex; flex-direction: column; }
-.access-art .browser-bar { flex-shrink: 0; }
+.access-art .browser-mock, .common-art .browser-mock { display: flex; flex-direction: column; }
+.access-art .browser-bar, .common-art .browser-bar { flex-shrink: 0; }
 .browser-shot { flex: 1; min-height: 0; width: 100%; object-fit: cover; object-position: left top; display: block; }
 @media(max-width:760px) { .access-art .browser-mock { top: 60px; height: 212px; } }
 .art-brand { position: absolute; top: 26px; left: 28px; display: flex; align-items: center; gap: 5px; font-family: var(--font-display); font-size: 26px; }
