@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Maximize2, ZoomIn, ZoomOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
@@ -6,12 +6,23 @@ import type { StoryImage } from '@/lib/projects';
 
 export function ExpandableStudyImage({ image }: { image: StoryImage }) {
   const [zoomed, setZoomed] = useState(false);
+  const [reduceMotion, setReduceMotion] = useState(false);
+  useEffect(() => {
+    const m = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update = () => setReduceMotion(m.matches);
+    update();
+    m.addEventListener('change', update);
+    return () => m.removeEventListener('change', update);
+  }, []);
+  const media = image.video && !reduceMotion
+    ? <video src={image.video} poster={image.poster ?? image.src} autoPlay muted loop playsInline aria-label={image.alt} />
+    : <img src={image.src} alt={image.alt} loading="lazy" />;
   return (
     <figure className={image.narrow ? 'narrow' : undefined}>
       <Dialog onOpenChange={() => setZoomed(false)}>
         <DialogTrigger asChild>
           <Button variant="ghost" className="study-image-trigger" aria-label={`Expand image: ${image.alt}`}>
-            <img src={image.src} alt={image.alt} loading="lazy" />
+            {media}
             <span className="image-expand-bubble" aria-hidden="true"><Maximize2 /></span>
           </Button>
         </DialogTrigger>
@@ -24,7 +35,7 @@ export function ExpandableStudyImage({ image }: { image: StoryImage }) {
             </Button>
           </div>
           <div className={`image-lightbox-viewport${zoomed ? ' is-zoomed' : ''}`}>
-            <img src={image.src} alt={image.alt} />
+            {media}
           </div>
         </DialogContent>
       </Dialog>

@@ -11,7 +11,7 @@ import qcCatalog from '@/assets/qc-exports/qc-query-catalog.png.asset.json';
 import qcBuilderCatalog from '@/assets/qc-exports/qc-builder-catalog.png.asset.json';
 import qcSave from '@/assets/qc-exports/qc-save-dialog.png.asset.json';
 
-export type StoryImage = { src: string; alt: string; caption: string; w: number; h: number; note?: string; narrow?: boolean };
+export type StoryImage = { src: string; alt: string; caption: string; w: number; h: number; note?: string; narrow?: boolean; video?: string; poster?: string };
 export type StoryConcept = { title: string; images: StoryImage[] };
 export type StorySection = { eyebrow: string; heading: string; body?: string[]; bullets?: string[]; learnings?: string[]; images?: StoryImage[]; stackImages?: boolean; concepts?: StoryConcept[]; highlight?: string };
 export type StoryHook = { line?: string; label?: string; body: string[]; glance: { label: string; value: string }[]; image: StoryImage };
@@ -26,7 +26,7 @@ const accessHook: StoryHook = {
     { label: 'Team', value: '1 Product manager, 7 BE Engineers, 1 FE Engineer' },
     { label: 'Outcome', value: '5+ of our largest customers onboarded to our beta' },
   ],
-  image: { src: scimUsers.url, alt: 'HCP users table showing SCIM sync status for every user', caption: 'Every synced user, with a status you can trust', w: 2880, h: 1920 },
+  image: { src: scimUsers.url, alt: 'HCP users table showing SCIM sync status for every user', caption: 'Every synced user, with a status you can trust', w: 2880, h: 1920, video: 'videos/scim-users-hover.mp4', poster: 'images/scim-exports/scim-users-clean.png' },
 };
 
 const accessStory: StorySection[] = [

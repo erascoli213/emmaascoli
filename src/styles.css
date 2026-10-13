@@ -411,7 +411,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-images.two, .story-images.many { grid-template-columns: 1fr 1fr; }
 .story-images figure { margin: 0; }
 .story-images figure.narrow { width: 100%; max-width: 440px; justify-self: center; }
-.story-images img { width: 100%; height: auto; display: block; border-radius: 14px; }
+.story-images img, .story-images video { width: 100%; height: auto; display: block; border-radius: 14px; }
 @media (min-width: 761px) { .story-images.two img { aspect-ratio: var(--pair-aspect, auto); object-fit: cover; object-position: top; } }
 .story-images figcaption { margin-top: 9px; font-family: "Caveat", cursive; font-size: 19px; color: var(--rose); }
 .story-noted { display: grid; gap: 14px; margin-top: 26px; }
@@ -433,7 +433,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .image-zoom-button:hover { background: var(--pink); transform: rotate(-8deg) scale(1.08); }
 .image-lightbox > button:last-child { top: 20px; right: 20px; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: var(--pink); color: var(--foreground); opacity: 1; box-shadow: var(--shadow-tactile); }
 .image-lightbox-viewport { overflow: auto; max-height: 76dvh; border-radius: 14px; background: var(--paper); overscroll-behavior: contain; }
-.image-lightbox-viewport img { display: block; width: 100%; height: auto; max-height: 76dvh; object-fit: contain; }
+.image-lightbox-viewport img, .image-lightbox-viewport video { display: block; width: 100%; height: auto; max-height: 76dvh; object-fit: contain; }
 .image-lightbox-viewport.is-zoomed img { width: 180%; max-width: none; max-height: none; }
 @keyframes image-pop { from { opacity: 0; scale: .9; } to { opacity: 1; scale: 1; } }
 @media(max-width:760px) { .image-lightbox { padding: 14px; width: calc(100vw - 20px); } .image-lightbox-caption { font-size: 22px; } .image-lightbox > button:last-child { top: 14px; right: 14px; } }
@@ -471,4 +471,5 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-glance dt { font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--rose); font-weight: 600; }
 .story-glance dd { margin: 6px 0 0; font-size: 14px; line-height: 1.45; }
 .story-hook-image { margin-top: 6px; }
+.story-hook-image video { display: block; width: 100%; height: auto; }
 @media (max-width: 760px) { .story-glance { grid-template-columns: 1fr; } .story-hook-body { font-size: 14px; } }
