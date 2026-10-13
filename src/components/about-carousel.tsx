@@ -9,7 +9,7 @@ const PHOTOS = [
   { url: fenway.url, alt: 'A baseball game at Fenway Park at dusk, with the field, crowd and Boston skyline', label: 'Fenway Park at dusk' },
 ] as const;
 
-const INTERVAL_MS = 4200;
+const INTERVAL_MS = 2000;
 
 export function AboutCarousel() {
   const [index, setIndex] = useState(0);
