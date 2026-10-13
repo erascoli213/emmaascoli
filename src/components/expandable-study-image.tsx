@@ -7,7 +7,7 @@ import type { StoryImage } from '@/lib/projects';
 export function ExpandableStudyImage({ image }: { image: StoryImage }) {
   const [zoomed, setZoomed] = useState(false);
   return (
-    <figure>
+    <figure className={image.narrow ? 'narrow' : undefined}>
       <Dialog onOpenChange={() => setZoomed(false)}>
         <DialogTrigger asChild>
           <Button variant="ghost" className="study-image-trigger" aria-label={`Expand image: ${image.alt}`}>

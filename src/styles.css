@@ -410,6 +410,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-images { display: grid; gap: 18px; margin-top: 22px; }
 .story-images.two, .story-images.many { grid-template-columns: 1fr 1fr; }
 .story-images figure { margin: 0; }
+.story-images figure.narrow { width: 100%; max-width: 440px; justify-self: center; }
 .story-images img { width: 100%; height: auto; display: block; border-radius: 14px; }
 @media (min-width: 761px) { .story-images.two img { aspect-ratio: var(--pair-aspect, auto); object-fit: cover; object-position: top; } }
 .story-images figcaption { margin-top: 9px; font-family: "Caveat", cursive; font-size: 19px; color: var(--rose); }
