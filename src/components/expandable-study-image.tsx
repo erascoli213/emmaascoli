@@ -19,6 +19,10 @@ export function ExpandableStudyImage({ image }: { image: StoryImage }) {
     : <img src={image.src} alt={image.alt} loading="lazy" />;
   return (
     <figure className={image.narrow ? 'narrow' : undefined}>
+      <figcaption>
+        <span className="cap-title"><span className="cap-mark" aria-hidden="true">✳</span><span>{image.caption}</span></span>
+        {image.description && <span className="cap-desc">{image.description}</span>}
+      </figcaption>
       <Dialog onOpenChange={() => setZoomed(false)}>
         <DialogTrigger asChild>
           <Button variant="ghost" className="study-image-trigger" aria-label={`Expand image: ${image.alt}`}>
@@ -39,7 +43,6 @@ export function ExpandableStudyImage({ image }: { image: StoryImage }) {
           </div>
         </DialogContent>
       </Dialog>
-      <figcaption>{image.caption}</figcaption>
     </figure>
   );
 }
