@@ -52,6 +52,7 @@ const queryHook: StoryHook = {
     { label: 'My role', value: 'Product designer leading the query catalog' },
     { label: 'Team', value: '3 designers, 1 PM, 20+ back-end, 3 front-end engineers' },
     { label: 'Outcome', value: 'Saved, shared queries that grow product value beyond a single session' },
+    { label: 'Today', value: 'Live in HCP, with saved queries in the catalog', href: 'https://developer.hashicorp.com/hcp/docs/infragraph' },
   ],
   image: { src: qcBuilderCatalog.url, alt: 'Query builder connected to the query catalog', caption: 'Where it ended up: the builder and catalog working as one', w: 1325, h: 947 },
 };
@@ -65,7 +66,7 @@ const queryStory: StorySection[] = [
   { eyebrow: 'The twist', heading: 'A solid foundation, but where was the value?', body: ['The flows worked. But a list of saved queries alone wasn’t going to change how teams monitor their infrastructure.'], highlight: 'We revisited our Lighthouse customer conversations to find the next step.' },
   { eyebrow: 'Round 2', heading: 'The value add', body: ['Customers had been clear: building a query and keeping it shouldn’t feel like two different places. I connected the builder and catalog so you can move between them fluidly, and added tags so a growing catalog stays easy to navigate.'], concepts: [{ title: 'A deeply connected query builder and catalog', images: [{ src: qcBuilderCatalog.url, alt: 'Query builder connected to the catalog', caption: 'Builder and catalog, side by side', w: 1325, h: 947 }] }, { title: 'Categorization with tags', images: [{ src: qcSave.url, alt: 'Save query dialog with tags', caption: 'Saving a query, with tags', w: 1327, h: 947 }] }] },
   { eyebrow: 'What’s next', heading: 'Where we’re headed', body: ['Two learnings from discovery shape the next phase:'], bullets: ['Scoped sharing: teams share with the right people, not the whole org', 'Health trends over time: seeing whether things are getting better'] },
-  { eyebrow: 'Impact', heading: 'What it meant for our customers', bullets: ['Increased long-term product value beyond single queries', 'Platform teams can collaborate to share and monitor insights'] },
+  { eyebrow: 'Impact', heading: 'What it meant for our customers', body: ['After I left HashiCorp, Infragraph launched publicly in HCP with the query catalog built in: teams can start from pre-built queries or build their own, then save, edit, and share them from the catalog.'], link: { label: 'See Infragraph in the HCP docs', href: 'https://developer.hashicorp.com/hcp/docs/infragraph' }, bullets: ['Increased long-term product value beyond single queries', 'Platform teams can collaborate to share and monitor insights'] },
   { eyebrow: 'Reflection', heading: 'What I’m taking with me', bullets: ['Day-2 experiences drive real product adoption', 'Talk to the people you’re building for, early and often'] },
 ];
 
