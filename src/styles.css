@@ -469,13 +469,13 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .story-hook { margin-top: 26px; display: grid; gap: 22px; }
 .story-hook-line { font-family: "DM Serif Display", serif; font-size: clamp(24px, 3vw, 34px); line-height: 1.2; color: var(--plum); width: 100%; }
 .story-hook-body { display: grid; gap: 12px; font-size: 16px; line-height: 1.7; max-width: 62ch; }
-.story-glance { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0; }
-.story-glance > div { padding: 16px 18px; border-radius: 20px; background: color-mix(in oklab, var(--soft-rose) 55%, var(--paper)); border: 1px solid color-mix(in oklab, var(--plum) 16%, transparent); }
+.story-glance { display: grid; margin: 0; border-bottom: 1px solid color-mix(in oklab, var(--plum) 18%, transparent); }
+.story-glance > div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 20px; align-items: baseline; padding: 14px 0; border-top: 1px solid color-mix(in oklab, var(--plum) 18%, transparent); }
 .story-glance dt { font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--rose); font-weight: 600; }
-.story-glance dd { margin: 6px 0 0; font-size: 14px; line-height: 1.45; }
+.story-glance dd { margin: 0; font-size: 14px; line-height: 1.5; }
 .story-hook-image { margin-top: 6px; }
 .story-hook-image video { display: block; width: 100%; height: auto; border-radius: 14px; }
-@media (max-width: 760px) { .story-glance { grid-template-columns: 1fr; } .story-hook-body { font-size: 14px; } }
+@media (max-width: 760px) { .story-glance > div { grid-template-columns: 1fr; gap: 4px; padding: 12px 0; } .story-hook-body { font-size: 14px; } }
 
 .story-link { color: var(--plum); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; display: inline-flex; align-items: center; gap: 3px; }
 .story-link:hover { color: var(--rose); }
