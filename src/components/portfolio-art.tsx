@@ -28,7 +28,7 @@ export function ProjectArt({ theme }: { theme: string }) {
     <span className="art-brand">computed properties{'\n'}✳</span>
     <div className="browser-mock">
       <div className="browser-bar"><span>● ● ●</span><small>[placeholder] / computed properties</small><ArrowUpRight size={12}/></div>
-      <img className="browser-shot" src="images/cp-exports/cp-zero-state.png" alt="" loading="lazy" />
+      <img className="browser-shot" src="images/cp-exports/cp-ai-poster.png" alt="" loading="lazy" />
     </div>
     <span className="art-caption">[placeholder caption]</span>
   </div>;

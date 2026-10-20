@@ -85,7 +85,7 @@ const computedHook: StoryHook = {
     { label: 'Outcome', value: '[Placeholder: headline outcome]' },
     { label: 'Today', value: 'Still in progress when I left Klaviyo' },
   ],
-  image: cpShot('zero-state', 'Computed properties zero state with flows to convert and suggested properties', 'Start from a flow you already have, or a suggested property', 1386, 948),
+  image: { src: 'images/cp-exports/cp-ai-poster.png', alt: 'Walkthrough: a recommended computed property, checked against the customer’s existing flow before converting', caption: 'Recommended properties, checked against the customer’s own flows', w: 1440, h: 900, video: 'videos/cp-ai.mp4', poster: 'images/cp-exports/cp-ai-poster.png' },
 };
 
 const computedStory: StorySection[] = [
