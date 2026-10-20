@@ -24,6 +24,14 @@ export function ProjectArt({ theme }: { theme: string }) {
     <div className="phone phone-front"><div className="phone-camera"/><div className="phone-top"><span>Good morning, Alex</span><span>☀</span></div><h4>Let’s grow<br/>something good.</h4><div className="plant-hero"><Leaf/></div><div className="care-panel"><span>A little love for your Monstera</span><strong>Time for a drink 💧</strong><div className="mock-action">Mark as watered <span>✓</span></div></div><div className="phone-nav"><Leaf size={15}/><Heart size={15}/><span>◌</span></div></div>
     <span className="art-caption">a happier kind of plant care</span>
   </div>;
+  if (theme === 'computed') return <div className="project-art common-art" aria-label="Placeholder artwork for the computed properties case study">
+    <span className="art-brand">computed properties{'\n'}✳</span>
+    <div className="browser-mock">
+      <div className="browser-bar"><span>● ● ●</span><small>[placeholder] / computed properties</small><ArrowUpRight size={12}/></div>
+      <img className="browser-shot" src="images/cp-placeholders/cp-hero.svg" alt="" loading="lazy" />
+    </div>
+    <span className="art-caption">[placeholder caption]</span>
+  </div>;
   return <div className="project-art common-art" aria-label="Infragraph query catalog with saved queries">
     <span className="art-brand">query catalog{'\n'}✳</span>
     <div className="browser-mock">

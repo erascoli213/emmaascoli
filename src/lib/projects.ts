@@ -68,6 +68,41 @@ const queryStory: StorySection[] = [
   { eyebrow: 'Reflection', heading: 'What I’m taking with me', bullets: ['Day-2 experiences drive real product adoption', 'Talk to the people you’re building for, early and often'] },
 ];
 
+
+const cpImg = (name: string, alt: string, caption: string, extra: Partial<StoryImage> = {}): StoryImage => ({ src: `images/cp-placeholders/cp-${name}.svg`, alt, caption, w: 2880, h: 1920, ...extra });
+
+const computedHook: StoryHook = {
+  label: 'TL;DR',
+  body: [
+    '[Placeholder: the problem in plain words. Who uses computed properties, what they were trying to do, and why it wasn’t working.]',
+    '[Placeholder: “I designed…” One sentence on what you designed and the trust problem it solved.]',
+  ],
+  glance: [
+    { label: 'My role', value: '[Placeholder: your role]' },
+    { label: 'Team', value: '[Placeholder: team makeup]' },
+    { label: 'Outcome', value: '[Placeholder: headline outcome]' },
+    { label: 'Today', value: '[Placeholder: where it lives now]' },
+  ],
+  image: cpImg('hero', 'Placeholder for the final computed property view', '[Placeholder: hero caption]'),
+};
+
+const computedStory: StorySection[] = [
+  { eyebrow: 'Context building', heading: '[Placeholder: the company, the product, and my team]', body: ['[Placeholder: what the product does and where computed properties fit, in 2–3 sentences.]', '[Placeholder: your team and what it owns.]'] },
+  { eyebrow: 'The problem', heading: '[Placeholder: problem headline]', body: ['[Placeholder: what was broken and why it mattered to customers.]', 'Customers told us they needed:'], bullets: ['[Placeholder: need 1]', '[Placeholder: need 2]', '[Placeholder: need 3]'], highlight: 'How might we [placeholder]?' },
+  { eyebrow: 'The people', heading: 'Who I was designing for', bullets: ['[Placeholder: persona 1 and what they care about]', '[Placeholder: persona 2 and what they care about]'] },
+  { eyebrow: 'Discovery', heading: 'Starting from the raw customer input', body: ['[Placeholder: where the input came from: calls, support tickets, usage data. Redact names and numbers.]', '[Placeholder: how you checked you were right, such as follow-up calls, data or a prototype test.]'], bullets: ['[Placeholder: method 1, e.g. customer calls]', '[Placeholder: method 2, e.g. support ticket review]', '[Placeholder: method 3, e.g. usage data]'], learnings: ['[Placeholder: learning 1]', '[Placeholder: learning 2]', '[Placeholder: learning 3]'], highlight: 'They asked for [X], but the job was [Y].', images: [cpImg('raw-input', 'Placeholder for raw customer input', '[Placeholder: redacted call notes, tickets or data]')] },
+  { eyebrow: 'Ideation - Round 1', heading: '[Placeholder: Round 1 headline]', stackImages: true, body: ['[Placeholder: your first direction and why. Include how fast you moved, e.g. “two weeks, three directions”.]'], bullets: ['[Placeholder: Round 1 decision 1]', '[Placeholder: Round 1 decision 2]'], images: [cpImg('early-sketches', 'Placeholder for early sketches and discarded directions', '[Placeholder: early sketches and the versions we threw away]'), cpImg('round1', 'Placeholder for the Round 1 design', '[Placeholder: Round 1 design]')] },
+  { eyebrow: 'The twist', heading: '[Placeholder: what changed your course]', body: ['[Placeholder: the feedback, data or test result that showed Round 1 wasn’t enough.]'], highlight: '[Placeholder: the new focus for the next round.]' },
+  { eyebrow: 'Ideation - Round 2', heading: 'Designing trust in the automation', body: ['[Placeholder: how people supervise, correct and override what the system computes.]'], concepts: [
+    { title: '[Placeholder] Preview and confidence: seeing what the system will compute before trusting it', images: [cpImg('preview', 'Placeholder for preview and confidence design', '[Placeholder: preview and confidence signals]')] },
+    { title: '[Placeholder] Supervise and override: correcting or editing a result', images: [cpImg('override', 'Placeholder for override design', '[Placeholder: override and edit flow]')] },
+    { title: '[Placeholder] When it’s wrong: error states, recovery and an audit trail', images: [cpImg('when-wrong', 'Placeholder for error and recovery design', '[Placeholder: a real example of the system being wrong and how users recovered]')] },
+  ] },
+  { eyebrow: 'Beyond the UI', heading: '[Placeholder: docs, enablement or terminology work, or delete this section]', body: ['[Placeholder: anything outside the screens that helped people trust the feature.]'] },
+  { eyebrow: 'Impact', heading: 'What it meant for our customers', body: ['[Placeholder: what shipped and what changed for customers.]'], bullets: ['[Placeholder: outcome 1]', '[Placeholder: outcome 2]', '[Placeholder: outcome 3]'] },
+  { eyebrow: 'Reflection', heading: 'What I’m taking with me', bullets: ['[Placeholder: reflection 1]', '[Placeholder: reflection 2]', '[Placeholder: what I’d do differently now]'] },
+];
+
 export const projects = [
   {
     slug: 'access-management', number: '01', kind: 'case' as 'case' | 'concept',
@@ -83,6 +118,14 @@ export const projects = [
     description: 'Turning one-off infrastructure questions in Infragraph into saved, shared insights teams can revisit over time.',
     category: 'HashiCorp · Infragraph', year: '2026', theme: 'common',
     story: queryStory, hook: queryHook as StoryHook | null,
+    problem: '', goal: '', flow: [] as string[], decisions: [] as (readonly [string, string])[], impact: '',
+  },
+  {
+    slug: 'computed-properties', number: '03', kind: 'case' as 'case' | 'concept',
+    name: 'Computed properties', title: '[Placeholder: one-line title for the case study.]',
+    description: '[Placeholder: one-sentence card description.]',
+    category: '[Placeholder: Company · Product area]', year: '[Year]', theme: 'computed',
+    story: computedStory, hook: computedHook as StoryHook | null,
     problem: '', goal: '', flow: [] as string[], decisions: [] as (readonly [string, string])[], impact: '',
   },
 ] as const;
