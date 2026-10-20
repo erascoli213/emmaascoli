@@ -120,8 +120,8 @@ export const projects = [
   },
   {
     slug: 'computed-properties', number: '03', kind: 'case' as 'case' | 'concept',
-    name: 'Computed properties', title: '[Placeholder: one-line title for the case study.]',
-    description: '[Placeholder: one-sentence card description.]',
+    name: 'Profile properties that keep themselves accurate', title: 'Replacing hand-built flow workarounds with properties that update on their own, keep their history, and prove they match before customers switch.',
+    description: 'Replacing hand-built flow workarounds with properties that update on their own, keep their history, and prove they match before customers switch.',
     category: 'Klaviyo · Data Platform, Profiles', year: '2026', theme: 'computed',
     story: computedStory, hook: computedHook as StoryHook | null,
     problem: '', goal: '', flow: [] as string[], decisions: [] as (readonly [string, string])[], impact: '',
