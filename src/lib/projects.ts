@@ -15,6 +15,7 @@ export type StorySection = { eyebrow: string; heading: string; link?: { label: s
 export type StoryHook = { line?: string; label?: string; body: string[]; glance: { label: string; value: string; href?: string }[]; image: StoryImage };
 
 const accessHook: StoryHook = {
+  label: 'TL;DR',
   body: [
     'HashiCorp Cloud Platform (HCP) was starting to land enterprise deals, but identity management didn’t scale. Security and platform teams already managed their people in tools like Okta and Azure, and they expected HCP to stay in sync automatically. Without that, onboarding stalled.',
     'I designed SCIM provisioning for HCP, from the first setup step to the moment an admin can look at 5,000 synced users and trust what they see.',
@@ -42,6 +43,7 @@ const accessStory: StorySection[] = [
 ];
 
 const queryHook: StoryHook = {
+  label: 'TL;DR',
   body: [
     'Infragraph lets teams query their entire infrastructure estate. But every insight was one-off: you couldn’t save a question, share it with a teammate, or come back next week to see if things had improved. That capped how much long-term value the product could deliver.',
     'I led the design of the query catalog, the system that turns one-off questions into shared, persistent insights teams can revisit over time.',
