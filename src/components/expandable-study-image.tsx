@@ -19,16 +19,15 @@ export function ExpandableStudyImage({ image }: { image: StoryImage }) {
     : <img src={image.src} alt={image.alt} loading="lazy" />;
   if (image.href) {
     return (
-      <figure className={image.narrow ? 'narrow' : undefined}>
-        <figcaption>
-          <span className="cap-title"><span className="cap-mark" aria-hidden="true">✳</span><span>{image.caption}</span></span>
-          {image.description && <span className="cap-desc">{image.description}</span>}
-        </figcaption>
-        <a className="study-image-trigger study-image-link" href={image.href} target="_blank" rel="noopener noreferrer" aria-label={`${image.linkLabel ?? 'Open'} (opens in a new tab): ${image.alt}`}>
-          {media}
-          <span className="image-link-pill" aria-hidden="true">{image.linkLabel ?? 'Open'} <ArrowUpRight /></span>
-        </a>
-      </figure>
+      <a className="doc-card" href={image.href} target="_blank" rel="noopener noreferrer" aria-label={`${image.linkLabel ?? 'Open'} (opens in a new tab): ${image.caption}`}>
+        <span className="doc-card-thumb"><img src={image.src} alt={image.alt} loading="lazy" /></span>
+        <span className="doc-card-body">
+          <span className="doc-card-eyebrow">Google Doc</span>
+          <strong className="doc-card-title">{image.caption}</strong>
+          {image.description && <span className="doc-card-desc">{image.description}</span>}
+          <span className="doc-card-btn">{image.linkLabel ?? 'Open'} <ArrowUpRight /></span>
+        </span>
+      </a>
     );
   }
   return (
