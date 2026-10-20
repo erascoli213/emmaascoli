@@ -78,17 +78,17 @@ const computedHook: StoryHook = {
     '[Placeholder: “I designed…” One sentence on what you designed and the trust problem it solved.]',
   ],
   glance: [
-    { label: 'My role', value: '[Placeholder: your role]' },
-    { label: 'Team', value: '[Placeholder: team makeup]' },
+    { label: 'My role', value: 'Lead designer' },
+    { label: 'Team', value: '1 Engineering manager, 1 Lead engineer, 1 Product manager' },
     { label: 'Outcome', value: '[Placeholder: headline outcome]' },
-    { label: 'Today', value: '[Placeholder: where it lives now]' },
+    { label: 'Today', value: 'Still in progress when I left Klaviyo' },
   ],
   image: cpImg('hero', 'Placeholder for the final computed property view', '[Placeholder: hero caption]'),
 };
 
 const computedStory: StorySection[] = [
-  { eyebrow: 'Context building', heading: '[Placeholder: the company, the product, and my team]', body: ['[Placeholder: what the product does and where computed properties fit, in 2–3 sentences.]', '[Placeholder: your team and what it owns.]'] },
-  { eyebrow: 'The problem', heading: '[Placeholder: problem headline]', body: ['[Placeholder: what was broken and why it mattered to customers.]', 'Customers told us they needed:'], bullets: ['[Placeholder: need 1]', '[Placeholder: need 2]', '[Placeholder: need 3]'], highlight: 'How might we [placeholder]?' },
+  { eyebrow: 'Context building', heading: 'Klaviyo, enterprise readiness, and my team', body: ['Klaviyo is the marketing platform brands use to email, text and personalize for their customers. As we scaled for enterprise, we wanted those customers to trust Klaviyo as a real data platform (Advanced KDP), not just a place to send messages.', 'Profile properties sit at the center of that. They’re the facts stored on each customer’s profile, like order_count: how many orders someone has placed over a set period, which can trigger a VIP email. In-house marketing leads and agency partners use properties to build segments, trigger flows and personalize content.', 'I was the lead designer on the Data Platform team’s Profiles group, working with an engineering manager, a lead engineer and a product manager.'] },
+  { eyebrow: 'The problem', heading: 'Properties went stale the moment they were made', body: ['Today, a property like order_count lives in a spreadsheet somewhere and has to be updated on profiles by hand. Some customers found a workaround: flows with if/then logic that update a property when something changes.', 'But the workaround left properties stale, and every time the logic changed it had to be updated everywhere the property was used: in flows, campaigns and personalization. Real enterprise readiness meant:'], bullets: ['Properties that update on a regular cadence, from a calculation the customer defines', 'One definition, created once and reused everywhere', 'Values marketers can trust are accurate when a message goes out'], highlight: 'How might we let customers define a property once and trust that it stays accurate everywhere they use it?' },
   { eyebrow: 'The people', heading: 'Who I was designing for', bullets: ['[Placeholder: persona 1 and what they care about]', '[Placeholder: persona 2 and what they care about]'] },
   { eyebrow: 'Discovery', heading: 'Starting from how customers work today', body: ['Before designing further, I wanted to see how customers keep properties up to date today, and how they’d react to an early prototype built against a property they’d actually made themselves.', 'We ran two moderated sessions at Klaviyo’s 2026 Champions Summit. Each one paired an in-house brand team with an agency partner, so they could react to each other and show where their day-to-day differs.', 'The workarounds told us the most. Agencies were building flows purely to keep properties current, not to message anyone, and one partner kept a spreadsheet just to track her property fields.', '[Placeholder: how you checked you were right after the sessions]'], bullets: ['2 × 70-minute moderated sessions with Klaviyo champion customers', 'Each session paired an in-house brand with an agency partner', 'Early prototype built in Claude, tested against each customer’s own property'], learnings: ['Customers were building flows only to maintain properties', 'Properties are last-write-wins, so history disappears with every update', 'Recurring, near real-time updates were the biggest draw', 'Suggested properties beat an empty builder as a starting point'], highlight: 'We set out to automate how properties get built, but the real job was keeping a history customers could trust.', images: [cpImg('raw-input', 'Placeholder for raw customer input', '[Placeholder: redacted session notes or a recreated workaround, such as the property-tracking spreadsheet]')] },
   { eyebrow: 'Ideation - Round 1', heading: '[Placeholder: Round 1 headline]', stackImages: true, body: ['[Placeholder: your first direction and why. Include how fast you moved, e.g. “two weeks, three directions”.]'], bullets: ['[Placeholder: Round 1 decision 1]', '[Placeholder: Round 1 decision 2]'], images: [cpImg('early-sketches', 'Placeholder for early sketches and discarded directions', '[Placeholder: early sketches and the versions we threw away]'), cpImg('round1', 'Placeholder for the Round 1 design', '[Placeholder: Round 1 design]')] },
@@ -124,7 +124,7 @@ export const projects = [
     slug: 'computed-properties', number: '03', kind: 'case' as 'case' | 'concept',
     name: 'Computed properties', title: '[Placeholder: one-line title for the case study.]',
     description: '[Placeholder: one-sentence card description.]',
-    category: '[Placeholder: Company · Product area]', year: '[Year]', theme: 'computed',
+    category: 'Klaviyo · Data Platform, Profiles', year: '2026', theme: 'computed',
     story: computedStory, hook: computedHook as StoryHook | null,
     problem: '', goal: '', flow: [] as string[], decisions: [] as (readonly [string, string])[], impact: '',
   },
