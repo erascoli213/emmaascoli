@@ -10,7 +10,6 @@ export function LoopDoodle({ className = '' }: { className?: string }) {
 
 export function ProjectArt({ theme }: { theme: string }) {
   if (theme === 'access') return <div className="project-art access-art" aria-label="HCP users table showing SCIM sync status for every user">
-    <span className="art-brand">identity provisioning&nbsp;{'\n'}✳</span>
     <div className="browser-mock">
       <div className="browser-bar"><span>● ● ●</span><small>identity / access control / users</small><ArrowUpRight size={12}/></div>
       <img className="browser-shot" src="images/scim-exports/scim-users-clean.png" alt="" loading="lazy" />
@@ -25,15 +24,13 @@ export function ProjectArt({ theme }: { theme: string }) {
     <span className="art-caption">a happier kind of plant care</span>
   </div>;
   if (theme === 'computed') return <div className="project-art common-art" aria-label="Placeholder artwork for the computed properties case study">
-    <span className="art-brand">computed properties{'\n'}✳</span>
     <div className="browser-mock">
-      <div className="browser-bar"><span>● ● ●</span><small>[placeholder] / computed properties</small><ArrowUpRight size={12}/></div>
+      <div className="browser-bar"><span>● ● ●</span><small>data management / computed properties</small><ArrowUpRight size={12}/></div>
       <img className="browser-shot" src="images/cp-exports/cp-ai-poster.png" alt="" loading="lazy" />
     </div>
-    <span className="art-caption">[placeholder caption]</span>
+    <span className="art-caption">properties you can trust</span>
   </div>;
   return <div className="project-art common-art" aria-label="Infragraph query catalog with saved queries">
-    <span className="art-brand">query catalog{'\n'}✳</span>
     <div className="browser-mock">
       <div className="browser-bar"><span>● ● ●</span><small>infragraph / query catalog</small><ArrowUpRight size={12}/></div>
       <img className="browser-shot" src="images/qc-exports/qc-query-catalog.png" alt="" loading="lazy" />
