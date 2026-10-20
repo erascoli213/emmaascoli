@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Maximize2, ZoomIn, ZoomOut } from 'lucide-react';
+import { ArrowUpRight, Maximize2, ZoomIn, ZoomOut } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import type { StoryImage } from '@/lib/projects';
@@ -17,6 +17,20 @@ export function ExpandableStudyImage({ image }: { image: StoryImage }) {
   const media = image.video && !reduceMotion
     ? <video src={image.video} poster={image.poster ?? image.src} autoPlay muted loop playsInline aria-label={image.alt} />
     : <img src={image.src} alt={image.alt} loading="lazy" />;
+  if (image.href) {
+    return (
+      <figure className={image.narrow ? 'narrow' : undefined}>
+        <figcaption>
+          <span className="cap-title"><span className="cap-mark" aria-hidden="true">✳</span><span>{image.caption}</span></span>
+          {image.description && <span className="cap-desc">{image.description}</span>}
+        </figcaption>
+        <a className="study-image-trigger study-image-link" href={image.href} target="_blank" rel="noopener noreferrer" aria-label={`${image.linkLabel ?? 'Open'} (opens in a new tab): ${image.alt}`}>
+          {media}
+          <span className="image-link-pill" aria-hidden="true">{image.linkLabel ?? 'Open'} <ArrowUpRight /></span>
+        </a>
+      </figure>
+    );
+  }
   return (
     <figure className={image.narrow ? 'narrow' : undefined}>
       <figcaption>

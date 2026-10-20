@@ -437,6 +437,10 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .study-image-trigger:active { transform: scale(.98); }
 .image-expand-bubble { position: absolute; bottom: 12px; right: 12px; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--pink); color: var(--foreground); border: 1px solid var(--plum); box-shadow: var(--shadow-tactile); transition: transform .4s cubic-bezier(.34,1.56,.64,1); }
 .study-image-trigger:hover .image-expand-bubble, .study-image-trigger:focus-visible .image-expand-bubble { transform: rotate(12deg) scale(1.12); }
+.study-image-link { cursor: pointer; text-decoration: none; color: inherit; }
+.image-link-pill { position: absolute; bottom: 12px; right: 12px; display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 18px; border-radius: 999px; background: var(--pink); color: var(--foreground); border: 1px solid var(--plum); box-shadow: var(--shadow-tactile); font-weight: 600; font-size: 15px; transition: transform .4s cubic-bezier(.34,1.56,.64,1); }
+.image-link-pill svg { width: 16px; height: 16px; }
+.study-image-link:hover .image-link-pill, .study-image-link:focus-visible .image-link-pill { transform: translateY(-2px) scale(1.04); }
 .image-lightbox { width: calc(100vw - 32px); max-width: 1400px; padding: 20px; gap: 16px; border: 1px solid var(--plum); border-radius: 24px; background: var(--background); color: var(--foreground); box-shadow: var(--shadow-device); }
 .image-lightbox[data-state=open] { animation: image-pop .42s cubic-bezier(.34,1.4,.64,1); }
 .image-lightbox-heading { display: flex; align-items: center; gap: 14px; padding-right: 48px; min-width: 0; }
@@ -449,7 +453,7 @@ h1,h2,h3 { font-family: var(--font-display); font-weight: 400; }
 .image-lightbox-viewport.is-zoomed img { width: 180%; max-width: none; max-height: none; }
 @keyframes image-pop { from { opacity: 0; scale: .9; } to { opacity: 1; scale: 1; } }
 @media(max-width:760px) { .image-lightbox { padding: 14px; width: calc(100vw - 20px); } .image-lightbox-caption { font-size: 22px; } .image-lightbox > button:last-child { top: 14px; right: 14px; } }
-@media(prefers-reduced-motion:reduce) { .study-image-trigger, .image-expand-bubble, .image-zoom-button { transition: none; } .image-lightbox[data-state=open] { animation: none; } .study-image-trigger:hover { transform: none; } }
+@media(prefers-reduced-motion:reduce) { .study-image-trigger, .image-expand-bubble, .image-link-pill, .image-zoom-button { transition: none; } .image-lightbox[data-state=open] { animation: none; } .study-image-trigger:hover { transform: none; } }
 
 /* Discovery: its own panel, with the methods and the learnings read apart */
 .story-discovery { position: relative; margin-block: 12px; padding: 30px 30px 32px; border: 1px solid color-mix(in oklab, var(--plum) 22%, transparent); border-radius: 28px; background: var(--paper); box-shadow: var(--shadow-device); }
